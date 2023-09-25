@@ -1,0 +1,77 @@
+
+
+semantic UI
+-----------
+
+.header
+.nav
+.section
+.aside
+.article
+.main
+.footer
+
+
+<header>
+---------
+
+Represents the introductory content of a page or section, ofter containing the site's logo, navigation, and other key infotmation.
+
+<header>
+    <h1>Wwelcome to my website</h1>
+</header>
+
+<nav>
+---------
+
+Defines a section containing navigation links to other pages or sections within the website
+
+<nav>
+    <a href="">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+</nav>
+
+<section>
+---------
+Defines a thematic grouping of content within a document. It helps to structure the content for better oraganition ad understanding.
+
+<section>
+    <p>Content goes here.</p>
+</section>
+
+<aside>
+---------
+Represents content that is tangentially related to the main content, like a sidebar ro a section containing related links or advertisements.
+
+<aside>
+    <ul>
+        <li><a href="/blog">Latest Blog Posts</a></li>
+        <li><a href="/offers">Special Off</a></li>
+    </ul>
+</aside>>
+
+<article>
+----------
+Represents a self-contained piece of content that could be distributed and understood independently, such as a blog post, news article, or forum post
+
+<article>
+    <p>Content goes here.</p>
+</article>
+
+<main>
+---------
+Indicates the main content of a document. There should be only one <main> element on a page.
+
+    <main>
+        <p>Explore our products.</p>
+    </main>
+
+
+<footer>
+---------
+Represents the footer of a section or a page, typically containing information like copyright notes. contact details, or links to related resources.
+
+<footer>
+    <p>Contact us at info@mycompany.com</p>
+</footer>

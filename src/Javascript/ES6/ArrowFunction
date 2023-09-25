@@ -1,0 +1,18 @@
+
+
+Arrow Function:
+--------------
+
+ => With arrow functions, you can write functions in a shorter way, which makes code easier to read and write.
+ => arrow functions implicity bind the this keyword to the enclosing scopes, so you don't need to use bind(), call(), or apply() to bind it to the current object.
+
+ const button = document.querySelector('button');
+
+ button.addEventListener('click', () => {
+    console.log('Button clicked');
+ });
+
+
+ const numbers = [1, 2, 3]
+ const squaredNumbers = numbers.map(x => x * x);
+ console.log(squaredNumbers )

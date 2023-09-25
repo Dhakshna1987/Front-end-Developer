@@ -1,0 +1,13 @@
+
+Static Methods
+===============
+Static methods belong to the class itselt, not instances.
+
+class mathUtils {
+    static add(x,y){
+        return x + y;
+    }
+}
+
+const result = MathUtils.add(5, 2);
+console.log(result) // output : 7

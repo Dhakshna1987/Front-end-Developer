@@ -1,0 +1,21 @@
+
+
+Components
+==========
+
+Components are used to describe a piece of the interface. These are simply Javascript function but it returns a Reace Element.
+
+
+Components Instance
+-------------------
+
+As components are the description  of a UI so we can think that a component is a template through which the whole appp is made
+
+Properties of a Component Instance
+-----------------------------------
+
+-->Component Instances are actual physical manifestations of a component
+
+-->A Component Instance has its own state and props.
+
+--> A Component instance has a lifecycle. i.e it can be born, live and die

@@ -1,0 +1,25 @@
+
+
+Higher Order Functions
+----------------------
+
+Higher order are functions that either accept one or more functions as arguments or returns a functions.
+
+
+Exmaple
+
+function autheticate() {
+    //code to authenticare
+}
+
+function authorize(){
+    //code to authorize resource
+}
+
+function getData(autheticate, authorize) {
+    if(autheticate()){
+        if(authorize()){
+            //fetch the data
+        }
+    }
+}

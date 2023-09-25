@@ -1,0 +1,39 @@
+
+Axios
+=====
+
+Axios is a popular Javascript library for making HTTP requests. It provides an easy-to-use API with additional features like interceptors and automatic JSON parsing. Here's an example
+
+
+axios.get(url)
+
+.then (response => {
+    const data = response.data;
+    //process the data
+    console.log(data);
+})
+.catch(error => {
+    //Handle any erros
+    console.error(error);
+});
+
+
+Async/Await with Axios:
+======================
+
+You can also use the async/Await syntax with axios for a more concise code structure.
+
+
+async function fetchData(){
+    try {
+        const responnse = await axios.get('url')
+        const data = response.data;
+        //process the data
+    }
+    catch{
+        //handle the error
+        console.error(error);
+    }
+}
+
+fetchData();

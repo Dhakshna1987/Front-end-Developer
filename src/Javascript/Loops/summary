@@ -1,0 +1,17 @@
+
+
+Loops
+-----
+
+In any programming language, Loops can execute a block of code a number of times.
+Loop are handy. If you want to run the same code over and over again, each time with a different value.
+
+There are 5 type of loops in javascript,
+
+1. for loop
+2. while loop
+3. do while loop
+4. for in loop
+5. for of loop
+
+

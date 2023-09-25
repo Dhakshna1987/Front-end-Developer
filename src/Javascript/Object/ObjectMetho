@@ -1,0 +1,82 @@
+Object:
+-------
+
+   The object data type is used to store collections of data, such as key-value pairs or arrays.
+
+
+Javascript Object Method:
+--------------------------
+1. Object.key()
+2. Object.values()
+3. Object.entries()
+4. Object.assign()
+5. Ojbect.freeze()
+6. Object.is()
+7. Object.defineProperty()
+8. Object.hasOwnProperty()
+
+
+const car = { make : 'Toyota', model: 'Camry'};
+
+
+ Object.key():
+ ===========
+
+ This method gets all the keys from an object and puts them into an array.
+
+ console.log(Ojbect.key(car)); //['make', 'model']
+
+ Object.values():
+ ===============
+
+ This method retrieves all the values from an object and puts them into an array
+
+ console.log(Ojbect.keys(car)); //['Toyota', 'Camry']
+
+ Object.entries()
+ ================
+
+ This method combines both keys and values are pairs, creating arrays of pairs from an objects properties.
+
+ console.log(Object.entries(car)) // [['make','Toyota'],['model','Camry'] ]
+
+ Object.assign()
+ ===============
+
+ It's like a photocopier for objects. This method is used to copy values from one or more source objects to a target object.
+  
+const details = {color: 'red'};
+const cardWithDetails = Object.assign(car, details);
+console.log(cardWithDetails) // { make : 'Toyota', model: 'Camry', color: 'red' }
+
+Object.freeze()
+==============
+Think of this as a protective shield for your object.
+
+Once an object is frozen, you can't add, delete, or modify its properties. it's useful when you want to ensure data integrity.
+
+Object.freeze(car);
+car.year = 2000; // Throws an error because car is frozen.
+
+Object.is()
+===========
+While it may look like the strict equality(===) operator, this method has some nunanced differences, especially when comparing NaN values.
+
+It checks if two values are the same, including distinguishing between positive and negative zeros.
+console.log(Object.is('hello', 'hello')); // true
+console.log(Object.is(NaN, NaN)); // false
+
+Object.defineProperty()
+=======================
+This method is your advanced tool for adding new properties or modifying existing ones.
+
+You can set characcteristics like enumerablility, writability, and configurability for the property, offering fine-grained control 
+over its behavior.
+
+Object.defineProperty(car, 'year' , {value : 2000, writable: false});
+console.log(car.year); //2000
+
+Object.hasOwnProperty()
+======================
+This method checks if an object has a specific property as its direct property (not inherited from its prototype).
+console.log(car.hasOwnProperty('make')); // true

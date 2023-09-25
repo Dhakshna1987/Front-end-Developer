@@ -1,0 +1,21 @@
+While Loop
+----------
+
+This loop is used to perform a set of instructions while a certain condition is true.
+
+//syntax
+
+while(condition){
+    //code to be executed as long as the condtion is true
+}
+
+//example
+
+let countdown = 10;
+
+let i = 0;
+
+while(i<countdown){
+    console.log(countdown)
+    countdown--;
+}

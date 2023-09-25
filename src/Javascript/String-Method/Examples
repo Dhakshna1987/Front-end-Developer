@@ -1,0 +1,70 @@
+String Method in Javascript with Examples
+=========================================
+
+1. concat():
+
+This method is used to combine two or more strings and return a new string. The original strings remain unchanged.
+
+let string1 = " I Love ";
+let string2 = "Javascript";
+let result = string1.concat(string2); // "I Love Javascript"
+
+
+2. includes():
+
+This method checks whether a string contains a specified substring and returns a boolean value, 
+true if the string contains the substring and false if it doesn't
+
+let string = "I Love Javascript";
+let result = string.includes("Love"); // true
+
+3. split():
+
+This method divides a string into an ordered list of substring, puts these substring into an arry, and returns the array.
+
+let string = "I Love Javascript";
+let result = string.split(" "); // ["I", "Love", "Javascript"]
+
+4. replace():
+
+This method returs a new string with a replacement for some or all of the pattern matches.
+
+let string = "I Love Javscript";
+let result = string.replace("Love" , "Adore");
+
+
+5. replaceAll():
+ 
+This method returns a new string with a replacement for each match of a pattern. 
+
+let string = "I Love Javascript, I Really Do!"
+let result = string.replaceAll("I", "We")
+
+6. trim():
+
+This method removes whitespace from both ends of a string. whitespace in this context is all the whitespace characters (space, tab, no-break space, ete..)
+and all the line terminator characters.
+
+let string = " I Love Javascript ";
+let result = string.trim(); //"I Love Javascript";
+
+7. toUpperCase():
+
+This method returns the calling string value converted to toUpperCase.
+
+let string = "I Love Javascript";
+let result = string.toUpperCase(); //"I LOVE JAVASCRIPT"
+
+8. toLowerCase():
+
+This method returns the calling string value converted to toLowerCase. So, "I Love JavaScript" turns into "i love javascript"
+
+let string = "I LOVE JAVASCRIPT";
+let result = string.toLowerCase(); //"i love javascript"
+
+
+
+
+
+
+

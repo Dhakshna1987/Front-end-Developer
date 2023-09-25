@@ -1,0 +1,10 @@
+
+What is useMemo() ?
+-------------------
+
+The useMemo is a hook used in the functional component of react that returns a memoized value.
+
+useMemo() is a build-in React hook that accepts 2 arguments - a function compute that computes a result, and the depedencies array.
+
+const memoHooks = useMemo(compute, dependencies);
+

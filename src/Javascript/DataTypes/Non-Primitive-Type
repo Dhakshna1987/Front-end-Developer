@@ -1,0 +1,66 @@
+
+
+Non - Primitive Data types
+--------------------------
+
+=> Non-primitive data types are data types that are not primitive values. meaning they do not contain a single value.
+=> Non-primitive data types are also reffered to as reference types and objects.
+=> They are created by the programmer and store collections of data.
+
+Here are some example of non-primitive data types in Javascript.
+
+. Objects
+. Arrays
+. Functions
+. Date
+
+
+Objects
+-------
+
+The object data type is used to store collections of data, such as key-value pair or arrays.
+
+ For Example.
+
+let person = {
+    name: 'surya,
+    age: 23,
+    hobbies: ['coding', 'traveling']
+};
+
+Arrays
+------
+
+The array data type is  a type of object that stores a collection of data in an ordered list.
+
+For example
+
+let numbers = [1, 2, 3, 4, 5];
+let actors = ['surya', 'vijay', 'rajini']
+ 
+Functions
+---------
+
+A Function is a block of code that performs a specific task. Functions are used to organize code and make it reusable.
+
+For example
+
+function greeting(name) {
+    console.log(`Hello, ${name}`)
+}
+
+greeting();
+
+Date
+-----
+
+The date data type is used to store date and time values.
+
+for example
+
+let today = new Date();
+console.log(today)
+
+
+
+

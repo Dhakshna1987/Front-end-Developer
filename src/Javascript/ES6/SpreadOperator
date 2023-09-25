@@ -1,0 +1,62 @@
+
+Spread Operator
+---------------
+
+The spread operator denoted by three dots(...), is a powerful feature introduced in ES6.
+
+It allows you to expand an iterate object such as an array, string, or object into individual elements.
+
+The spread operator is commonly used in function calls, array literals, and object literals
+
+
+1. Array Concatenation
+---------------------
+
+const array1 = [1,2,3]
+const array2 = [4,5,6]
+
+const concat = [...arrays1, ...array2] // output: [1,2,3,4,5,6]
+
+2. Array Copy
+-------------
+
+const original = [ 2,3,4];
+
+const copy = [ ...original]
+
+console.log(copy) // output: [2,3,4]
+
+3. Object Copy
+---------------
+
+const original = { name: "John", age : 25};
+
+const copy = { ...original}
+
+console.log(copy) // { name: "John", age: 25}
+
+4. Object Merging
+-----------------
+
+const obj1 = { a: 1};
+const obj2 = { b: 2};
+
+const merged = { ...obj1, ...obj2};
+
+console.log(merged); // output: {a: 1, b: 2}
+
+5. Function Arguments
+---------------------
+
+function addNumbers(a, b, c) {
+    return a + b + c
+}
+
+const numbers = [1, 2, 3];
+const sum = addNumbers(...numbers);
+
+console.log(sum); // 6
+
+
+
+

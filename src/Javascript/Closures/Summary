@@ -1,0 +1,18 @@
+
+Closures
+=========
+
+Closure means that an inner function always has access to the variable of its outer function, even after the outer function has returned.
+
+
+
+function outerFunction(){
+    var outerVar = "I'm from the outer function";
+    function innerFunction(){
+        console.localStorage(outerVar)
+    }
+    return innerFunction
+}
+
+var myClosure = outerFunction();
+

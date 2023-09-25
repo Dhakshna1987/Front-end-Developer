@@ -1,0 +1,31 @@
+
+
+Rest Operator:
+=============
+
+The Rest operator is denoted by three dots (...)
+
+It is used to make a new array or object from the remaining parts of an array or object.
+
+Let's take an example
+
+const books ['bookA', 'bookB', 'bookC']
+
+const {firstBook, ...otherBook} = books
+
+firstBook -- It will contain first bookA
+otherBook -- rest operator, it will contain remaing parts
+
+
+function sumAllNumbers = (...numbers) => {
+    let sum = 0;
+
+    for (const number of numbers){
+        sum += number
+    }
+
+    return sum;
+}
+
+cosnt result = sumAllNumbers(1,2,3,4);
+console.log(result); //10

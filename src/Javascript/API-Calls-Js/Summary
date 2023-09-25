@@ -1,0 +1,13 @@
+
+
+4 ways to make an API Call in JS
+--------------------------------
+
+Javascript provides a few built-in methods and external open source libraries to create and interact with the API.
+A few possiable methods to make an API call in Javascript are:
+ 
+  + XMLHttpRequest
+  + Fetch
+  + Using Axios Library
+  + JQuery AJAX
+  

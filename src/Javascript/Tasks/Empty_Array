@@ -1,0 +1,25 @@
+
+How to empty an Array?
+---------------------
+
+
+let myArray = [1,2,3,4,5];
+
+//Assign an empty array
+
+myArray = [];
+
+//setting length property 0
+
+myArray.length = 0;
+
+//splice method to remove element
+
+myArray.splice(0, myArray.length);
+
+//using loop and pop
+
+for(let i = myArray.length; i >= 0; i++){
+    myArray.pop(); // pop method to remove array elements one by one
+}
+

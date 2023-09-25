@@ -1,0 +1,28 @@
+
+
+Getter and Setter
+=================
+
+Getters and setters allow controlled access to class properties.
+
+class Circle {
+    constructor(radius) {
+        this._radius = raidus;
+    }
+
+    get radius() {
+        return this._radius;
+    }
+
+    set radius(value) {
+        if (value < 0) {
+            console.log("Radius cann't be negative.")
+            return;
+        } 
+        this._radius = value;
+    }
+}
+
+const myCirlce = new Circle(5);
+console.log(myCirlce.radius) // 5
+myCirlce.radius = -2 // Radius cann't be negative

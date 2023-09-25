@@ -1,0 +1,23 @@
+
+
+SuperAgent
+==========
+
+SuperAgent is a lightweight HTTP request library that provides an easy-to-use API and supports promises.
+
+
+Example:
+
+const request = request ('superagent');
+
+request
+  .get('https://api.example.com/data')
+  .then(response => {
+     const data = response.body;
+     //process the data
+     console.log(data)
+  })
+  .catch(error => {
+    //handle the process
+    console.error(error);
+  });

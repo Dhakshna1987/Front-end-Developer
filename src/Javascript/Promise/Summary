@@ -1,0 +1,65 @@
+
+What is Promise
+================
+
+* The Promise is an object in javascript that is use for asynchronous programing.
+* Promise is a good way to handle asynchronous operations.
+
+
+It has differenct states that are,
+
+Pending    - A promise is in progress
+Fullfilled - A promise has been completed
+Rejected   - A promise has been failed
+
+
+Demonstration
+-------------
+Here's a demonstration of how promise work:
+
+            Promise
+
+.catch                    .then
+
+Error handling             Async Action
+
+
+const myPromise = new Promise((resolve, reject) => { //makes the function an asynchronous
+
+    setTimeout(() => {  //Javascript native function calls this function when the timer is completed
+        resolve("call)
+    }, 3000)
+
+})
+
+
+
+Example:
+--------
+
+const myPromise = new Promise((resolve, reject) => {
+    if(/*condition*/){
+        resolve();
+    }else{
+        reject();
+    }
+});
+
+myPromise.then(res => {
+    /*handle resolve */
+}).catch(){
+    /*handle reject */
+}
+
+
+Promise VS Async Await:
+======================
+
+Promise vs Async Await is a whole topic itself but one of the major difference is Promise use nested functions (.then) which eventually makes too many nested functions and code looks like a mess.
+
+on the other hand Async Await keeps the code look more synchronous and clean.
+
+At the end, both helps you achieving the same task.
+
+
+

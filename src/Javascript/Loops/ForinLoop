@@ -1,0 +1,23 @@
+
+For in Loop
+-----------
+
+This loop is used to iterate over the properties of an object (or)
+
+It allows you to access and perform operations on each property of an Object one by one
+
+//syntax 
+
+for(variable in object){
+    //code to be executed for each object
+}
+
+let obj = {
+    name: "CodeBuster",
+    age: 22,
+    place: "India"
+};
+
+for(let key in obj){
+    console.log(key  + ": " + obj[key]) // name: CodeBuster age: 22 place: India
+}
