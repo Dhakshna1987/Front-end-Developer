@@ -22,3 +22,4 @@ for(let i = myArray.length; i >= 0; i++){
     myArray.pop(); // pop method to remove array elements one by one
 }
 
+//
