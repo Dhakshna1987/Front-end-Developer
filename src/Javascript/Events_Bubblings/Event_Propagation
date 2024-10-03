@@ -1,0 +1,45 @@
+
+JS Event Propagation
+--------------------
+
+Bubbling, Capturing
+-------------------
+
+.Event Propagation manages the flow of events through nested elements.
+
+.Utilizing event bubbling & capturing phases, event Propagation ensures precise event handling and responsiveness within 
+the hierarchical structure of the application
+
+addEventListner("click", (e) => { } boolean)
+
+boolean is true --> Capturing top to bottom
+boolean is false --> default false, Bubbling bottom to top
+
+Event bubbling: 
+---------------
+ Event bubbling Propagation an event  from the target element up the DOM tree. (Default useCapture: false)
+
+Event capturing:
+---------------
+ Event capturing Propagation an event from the root down to the target element. (useCapture: True )
+
+
+ Examples:
+ ---------
+
+ let grandParent = document.querySelector("#grandParent");
+ let parent = document.querySelector("#parent");
+ let child = document.querySelector("#child");
+
+ grandParent.addEventListner("click", (e) => {
+   console.log("grandParent Event")
+ }); 
+
+ parent.addEventListner("click", (e) => {
+    console.log("Parent Event")
+  }); 
+
+  child.addEventListner("click", (e) => {
+    console.log("child Event")
+    e.stopPropagation()
+  });

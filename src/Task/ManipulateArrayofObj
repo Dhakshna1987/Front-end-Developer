@@ -1,0 +1,32 @@
+//Use ES6 array methods to process and manipulate an array of objects
+
+  
+  // Function to get names of active people, sorted alphabetically
+const getActivePeopleNames = (arr) => {
+    return arr
+      .filter(person => person.isActive)  // Step 1: Filter active people
+      .map(person => person.name)         // Step 2: Map to an array of names
+      .sort();                            // Step 3: Sort names alphabetically
+  };
+  
+  // Test the function
+  const people = [
+    { name: "John", age: 25, isActive: true },
+    { name: "Jane", age: 30, isActive: false },
+    { name: "Mike", age: 21, isActive: true },
+    { name: "Sara", age: 28, isActive: true }
+  ];
+  
+  console.log(getActivePeopleNames(people));  // Output: ["John", "Mike", "Sara"]
+  
+//   Alternative Approach (With Optional Chaining):
+//   You could also use optional chaining and nullish coalescing (??) to handle cases where some objects might not have an isActive property:
+  
+  
+  const getActivePeopleNames = (arr) => {
+    return arr
+      .filter(person => person.isActive ?? false)  // Handle undefined `isActive`
+      .map(person => person.name)
+      .sort();
+  };
+  

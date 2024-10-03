@@ -9,7 +9,7 @@ It is used to make a new array or object from the remaining parts of an array or
 
 Let's take an example
 
-const books ['bookA', 'bookB', 'bookC']
+const books = ['bookA', 'bookB', 'bookC']
 
 const {firstBook, ...otherBook} = books
 

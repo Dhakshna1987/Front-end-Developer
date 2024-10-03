@@ -1,0 +1,34 @@
+map()
+The map() method iterates over an array, applying a callback function to each element and returning a new array of modified elements.
+
+// Syntax
+myArray.map(callbackFn)
+For example:
+
+let scores = [45, 71, 65, 80, 47];
+
+let newScores = scores.map((score) => score + 5);
+
+console.log(newScores); // Output: [50, 76, 70, 85, 52]
+
+
+reduce()
+The reduce() method applies a reducer function to each element of an array and returns a single output. The reducer function iterates through all elements in the array and returns the result of the previous element’s calculation.
+
+/ Syntax
+myArray.reduce(callbackFn, initialValue)
+For example:
+
+let staff = [
+    { name: "John Doe", salary: 120 },
+    { name: "Jane Doe", salary: 350 },
+    { name: "Karl Don", salary: 710 }
+];
+
+const totalSalary = staff.reduce((total, staffPerson) => {
+    total += staffPerson.salary;
+    return total;
+}, 0);
+
+console.log(totalSalary); // Output: 1180
+Note: reduce() is a complex array method.

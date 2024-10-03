@@ -1,0 +1,7 @@
+
+What is React Suspense, and how do you use it? 
+
+
+React Suspense is a feature that lets you wait for some code to load 
+and declaratively specify a loading state while waiting. It's often 
+used with React.lazy to handle lazy-loaded components.

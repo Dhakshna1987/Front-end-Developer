@@ -1,0 +1,75 @@
+CSS GRID
+--------
+.Grid Layout
+.Rows & Column
+.Repeat()
+.Column & row gap()
+.Grid gap
+.Grid Lines
+
+
+Grid Layout:
+------------
+The CSS Grid Layout Module offers a grid-based Layout system, with rows & Column, 
+making it easier to design web pages without having to use floats & positioning.
+
+Row & Column
+------------
+
+.container {
+    grid-template-columns: 40px 50px auto 50px 40px;
+    grid-template-rows: 25% 100px auto;
+}
+
+Repeat
+------
+using normal rows and columns for grid
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr;
+    grid-template-rows: 100px auto 20% 100px auto 20px;
+
+}
+
+(or)
+
+We can use the Repeat() notation like this instead to simplify;
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr 2fr);
+    grid-template-rows: repeat(2, 100px auto 20%)
+}
+
+column gap & row gap
+----------------
+.container {
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+(or)
+
+.container {
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px;
+    gap: 15px 10px;
+}
+
+Grid Lines
+----------
+
+Place a grid item at column line 1, and let it end on column line 3
+
+.item {
+    grid-column-start: 1;
+    grid-coclumn-end: 3;
+}
+
+Place a grid item at row line 1, and let it end on row line 3
+.item {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}

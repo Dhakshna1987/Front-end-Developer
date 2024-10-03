@@ -1,0 +1,76 @@
+
+React Fragement
+===============
+
+React Fragments let you group multiple elements without adding an extra node to the DOM. You can use the <React.Fragment> element or the shorthand syntax <>...</>
+
+
+With React 16.2 and above Fragments you can use a fragment to avoid adding the extra wrapper, fragments and denoted by the special syntax:
+
+<React.Fragment> or <> </>
+
+Without Fragments
+-----------------
+Prior to React 16.2 You had to wrap them in a single parent element.
+
+For example.
+ const MyComponent = () => {
+    return (
+        <div>
+        <h1>Hello</h1>
+        <p>This is a paragraph.</p> 
+        </div>
+    )
+ }
+export default MyComponent;
+
+
+With Fragments
+--------------
+
+A Fragment is simply an empty element that acts as a container for other elements without rendering any additional DOM nodes.
+
+For example.
+ const MyComponent = () => {
+    return (
+        <>
+        <h1>Hello</h1>
+        <p>This is a paragraph.</p> 
+        </>
+    )
+ }
+export default MyComponent;
+
+With Fragments
+--------------
+
+Fragments can also have a key prop, just like any other React element. The key prop is useful when you're dynamically rendering lists of fragments. with <React.Fragment>
+
+import React from 'react';
+
+const MyListComponent = ({ items}) =? {
+    return (
+        <>
+        {items.map((item) => (
+            <React.Fragment key={item.id}>
+            <span>{item.name} </span>
+            <br />
+            </React.Fragment>
+        ))}
+        </>
+    )
+}
+export default MyComponent;
+
+If Not Using Fragments
+========================
+
+Extra DOM nodes:
+
+ Using a regular container introduces additional DOM nodes in the rendered output, which can lead to increased memory usage and slightly slower rendering.
+
+CSS conflicts:
+
+If the wrapper element has its own CSS styles or classes, they might unintentionally affect the layout or styles of the child elements inside the component.
+
+

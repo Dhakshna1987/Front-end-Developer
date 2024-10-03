@@ -1,0 +1,85 @@
+
+JS Destructuring
+----------------
+
+Allows you to extract values from arrays or object and assign them to variables using a concise syntax.
+
+It's a convenient way to extract specific data from complex data structures and simplify your code.
+
+Destructuring Array
+-------------------
+
+const myArray = [1,2,3];
+
+const [a, b, c] = myArray;
+
+console.log(a) // 1
+console.log(b) //2
+console.log(c) //3
+
+Here a, b & c are seprate variables.
+
+Destructuring Object
+----------------------
+
+const myObj = { name: "Jai", age: 25};
+const { name, age}  = myObj;
+
+console.log(name) //"Jai"
+console.log(age) //25
+
+Nested Objects
+--------------
+const myObj = {
+    name: "Arjun",
+    age : 24,
+    address: {
+        city: "chennai"
+        state: "TN"
+    }
+}
+
+const { name, age, address: {city, state}} = myObj;
+
+console.log(name) // 'Arjun'
+console.log(age) // 24
+console.log(city) // chennai
+console.log(state) // 'KA'
+
+
+
+Default values (arrays)
+--------------
+const myArray = [1, 2]
+
+const [a, b, c = 3] = myArray;
+
+console.log(a); //1
+console.log(b); //2
+console.log(c); //3
+
+Default values (object)
+-----------------------
+
+const myObj = { name : "Techbuddies" };
+
+const { name, age = 23 } = myObj;
+
+console.log(name); //"Techbuddies"
+console.log(age); // 23
+
+Alternate names (arrays, object)
+---------------
+
+const myArray = [1,2,3];
+const [a,b,c: third] = myArray;
+console.log(a); // 1
+console.log(b); //2
+console.log(third) // 3
+
+const myObj = { name:"ramesh", age: 25};
+
+const { name: myName, age} = myObj;
+console.log(age); //25
+console.log(myName) //ramesh
+

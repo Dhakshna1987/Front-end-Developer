@@ -1,0 +1,11 @@
+
+SessionStorage
+==============
+
+SessionStorage is a web api allows web applications to store key-value pairs in a similar way to localStorage.
+
+The difference is that SessionStorage stores the data only for duration of a single browsing session, while localStorage stores data indefinitely or until it is manually cleared.
+
+
+This Web Api makes it ideal for storing temporary data that needs to persist within the current browsing session.
+

@@ -1,0 +1,29 @@
+fill()
+Using the fill() operation, we can replace certain elements with static values. This method is an in-place method, meaning that it modifies the original array. It does not return a new array.
+
+Syntax:
+array.fill(value, start, end)
+
+const nums = [1, 2, 3, 5, 6];
+nums.fill(0); // fills the entire array with 0
+console.log(nums);
+
+const strings = ["code", "damn", "web2", "web3"];
+strings.fill("abc", 2, 4); // fills the elements with abc at index 2 and 3
+console.log(strings);
+
+//output
+[0, 0, 0, 0, 0]
+['code', 'damn', 'abc', 'abc']
+
+
+join()
+The join() method returns an array as a string. This method takes in your preferred separator as its parameter.
+
+// Syntax
+myArray.join(separator)
+
+let names = ['John', 'Doe'];
+let joinedNames1 = names.join(); // 'John,Doe'
+let joinedNames2 = names.join(' '); // 'John Doe'
+let joinedNames3 = names.join('-'); // 'John-Doe'

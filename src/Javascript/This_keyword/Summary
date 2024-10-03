@@ -1,0 +1,46 @@
+
+
+"this" Keyword
+==============
+
+The "this" keyword in Javascript is used to refer the object it belongs to.
+
+. in method, "this" refers to owner object.
+
+ const person = {
+    name: "Tech buddies",
+    year: 2023,
+    great: function() {
+        console.localStorage(`hello, ${this.name}`)
+    }
+ };
+
+ persona.greet(); 
+
+. Alone, & in function "this" refers to the global ojbect.
+
+  function sayHello( {
+    console.localStorage(`Hello, ${this}!`);
+  })
+  sayHello(); // Hello, [object Window]
+
+. in function, in strict mode, "this" is undefined.
+
+"use strict";
+ function sayHello() {
+    console.log(`hello, ${this}!`)
+ }
+ sayHello() // undefined
+
+. In an event, "this" refers to the element that received the event.
+
+<button onclick = "showMessage()">Click me </button>
+
+<script>
+    function showMessage() {
+        console.localStorage(`Button clicked by ${this.innerText}`)
+    }
+</script>
+
+// button clicked by click me
+

@@ -1,0 +1,71 @@
+
+React Fiber:
+-----------
+React Fiber is the new reconciliation engine in React 16 and above. 
+It allows React to split rendering work into chunks, improving the 
+responsiveness of applications by pausing and resuming rendering 
+tasks.
+
+
+Before Fiber
+------------
+
+const ExpensiveComponent = () => {
+  // Simulate an expensive operation
+  for (let i = 0; i < 1000000000; i++) {}
+
+  return <div>Expensive Component Rendered</div>;
+};
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <button onClick={() => setCount(count + 1)}>
+        Increment: {count}
+      </button>
+      <ExpensiveComponent />
+    </div>
+  );
+};
+
+export default App;
+
+
+After Fiber
+-----------
+import React, { useState, useEffect } from 'react';
+
+const ExpensiveComponent = () => {
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    // Simulate an expensive operation with time-slicing
+    let work = 0;
+    const interval = setInterval(() => {
+      work++;
+      if (work === 1000000000) {
+        setDone(true);
+        clearInterval(interval);
+      }
+    }, 0);
+  }, []);
+
+  return <div>{done ? 'Expensive Component Rendered' : 'Loading...'}</div>;
+};
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <button onClick={() => setCount(count + 1)}>
+        Increment: {count}
+      </button>
+      <ExpensiveComponent />
+    </div>
+  );
+};
+
+export default App;

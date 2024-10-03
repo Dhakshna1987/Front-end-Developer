@@ -1,0 +1,8 @@
+
+Lazy Loading:
+=============
+
+Lazy loading is a technique to defer the loading of non-essential 
+resources until they are needed. In React, you can implement lazy 
+loading using React.lazy() and Suspense to load components only 
+when they are needed.

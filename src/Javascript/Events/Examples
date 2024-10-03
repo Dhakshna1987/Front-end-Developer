@@ -1,0 +1,43 @@
+
+JS Basic Events
+----------------
+
+. Click (onClick)
+. Double Click (ondblclick)
+. Right Click (oncontextmenu)
+
+. Mouse Hover (onmouseenter)
+. Mouse Out (onmouseout)
+. Mouse Down (onmousedown)
+. Mouse up(onmouseup)
+
+. Key Press (onkeypress)
+. Key Up (onkeyup)
+
+. Load(onload)
+. Unload (onunload)
+
+Define Events
+_------------
+
+1. Adding events in HTML inline.
+ <button onClick="myFunc()">Click me</button>
+
+2. From JS events
+  
+  element.onclick = myFunc;
+
+3. From JS addEventListner method
+
+  element.addEventListner("click", myFunc); 
+
+  Examples
+  ========
+//HTML
+  <button id="btn" onclick="myFunc()">click me</button>
+
+  //javascript
+
+  function myFunc() {
+    consnole.log("Hello, Good Evening");
+  }

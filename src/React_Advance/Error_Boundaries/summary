@@ -1,0 +1,5 @@
+
+
+Error boundaries are React components that catch JavaScript errors 
+in their child component tree, log those errors, and display a 
+fallback UI instead of crashing the entire application

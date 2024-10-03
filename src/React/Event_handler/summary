@@ -1,0 +1,31 @@
+Event handling in React is similar to handling events in DOM 
+elements, but with some syntactical differences. For example, 
+React events use camelCase syntax, and you pass the event 
+handler function without parentheses
+
+
+In React, a Synthetic Event is a cross-browser wrapper around the browser’s native event system. It provides a consistent API regardless of the browser, combining the best features of native events and abstracting away differences across browsers.
+
+import React from 'react';
+
+function App() {
+  const handleClick = (event) => {
+    // This is a synthetic event
+    console.log('Synthetic Event Type:', event.type);
+
+    // You can access native event properties
+    console.log('Native Event:', event.nativeEvent);
+
+    // Prevent the default behavior
+    event.preventDefault();
+  };
+
+  return (
+    <div>
+      <h1>Hello, React Synthetic Event!</h1>
+      <button onClick={handleClick}>Click Me</button>
+    </div>
+  );
+}
+
+export default App;

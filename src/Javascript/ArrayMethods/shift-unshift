@@ -1,0 +1,16 @@
+shift()
+The shift() method removes the first element of an array. It works similarly to the pop() method, but instead of removing from the end, it removes from the beginning of the attached array. It returns the removed/shifted element.
+
+let animalNames = ["Lion", "Dog", "Snake", "Tiger"];
+animalNames.shift(); // "Lion"
+
+console.log(animalNames); // ['Dog', 'Snake', 'Tiger']
+
+
+unshift()
+The unshift() method works similarly to the push() method as it is used to add new elements to an array, but to the beginning of an array. This method takes the element(s) you wish to add at the beginning of the array as parameters. It also returns the new length of the array.
+
+
+let foodNames = ["Salad", "Bread", "Fish", "Rice"];
+foodNames.unshift("Pizza", "Cake"); // Returns 6 - the length of the newly changed array
+console.log(foodNames); // ['Pizza', 'Cake', 'Salad', 'Bread', 'Fish', 'Rice']

@@ -62,8 +62,28 @@ This method returns the calling string value converted to toLowerCase. So, "I Lo
 let string = "I LOVE JAVASCRIPT";
 let result = string.toLowerCase(); //"i love javascript"
 
+9. .charAt():
 
+REturn the character at a speific index.
 
+let string = "abc";
+strring.charAt(1); //b
+
+10. .includes():
+
+Checking if a string contains a specified value.
+let str = "Hello"
+str.includes(el); //true
+
+11. .indexOf():
+REturn the index of the first occurance of a value
+let str = 'Hello';
+str.indexOf(e); // 1
+
+12. .slice();
+Extracts a part of a string
+ let str = "Hello"; 
+ str.slice(1,3) ; //"el"
 
 
 

@@ -1,0 +1,80 @@
+
+What is Hooks ?
+---------------
+
+In React, 'hooks' are functions that allow you to use state & other React features (life cycle methods) in functional components.
+
+There were introduced in React version 16.8 and provide a more concise and reusable way to manage state and side effects compared to class component.
+
+Hooks Rules
+-----------
+. You must import Hooks from react.
+. Hooks can only be called inside React function components.(Not in Class components)
+. Hooks can only be called at the top level of a component.
+. Hooks cannot be conditional.
+
+Key Concepts:
+--------------
+
+State Management : Hooks like useState allow you to add state to funcional component.
+
+Side effect: Hooks like useEffect let you perform side effects in your components. such as data fetching, subcriptions, or manual DOM manipulation.
+
+Reusability: Custom hooks enable the reuse of stateful logic across different components without changing their design.
+
+Commonly Used Hooks:
+--------------------
+useState:
+Allows you to add state to the functional component.
+
+syntax:
+   const [state, setState] = useState(initialValue);
+
+useEffect:
+Manages side effects such as data fetching, subcriptions, or manually changing the DOM.
+
+syntax:
+  useEffect(effectfunction, dependencies);
+
+useContext:
+Accesses React context without using Context.Cunsumer
+
+syntax:
+const value = useContext(Context);
+
+useReducer:
+Manages complex state logic, similar to useState but with a reducer function.
+
+syntax:
+
+const [state, dispatch] = useReducer(reducer, initialState);
+
+useRef:
+Provides a way to access and interact with DOM elements or persist values across renders without causing a re-render.
+
+const ref = useRef(initialValue);
+
+
+Custom Hooks:
+custom hooks are function that start with "use" and allow you to reuse stateful logic . They can call other hooks and perform reusable behavior.
+
+Note: Hooks must be called at the top level of a component or custom hook, not inside loop, conditions, or nested fuctions.
+
+List of React Hooks
+-------------------
+
+1. useState
+2. useEffect
+3. useContext
+4. useCallback
+5. useId
+6. useMemo
+7. useReducer
+8. useRef
+9. useImperativeHandle
+10. useSyncExternalStrore
+11. useDebugValue
+12. useDefeeredValue
+13. useInsertionEffect
+14. useLayoutEffect
+15. useTransition

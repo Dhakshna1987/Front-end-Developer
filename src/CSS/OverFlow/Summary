@@ -1,0 +1,29 @@
+
+CSS OverFlow
+------------
+overflow: visible
+overflow: hidden
+overflow: scroll
+overflow: auto
+overflow-x;
+overflow-y;
+
+visiable
+--------
+
+This is the default value. Any content that overflows the container will be visible.
+ 
+Hidden
+-------
+Hidens any content that overflows the container.
+
+scroll
+-------
+Scroll will add horizontal and vertical scroll bars even if content isn't larger than the container.
+
+auto
+-----
+Auto will only add scroll bars when required it is usually the prefered option over scroll
+
+overflow-x : It is controls the overflow content that flows horizontally (width)
+overflow-y : It is controls the overflow content that flows vertically (height)

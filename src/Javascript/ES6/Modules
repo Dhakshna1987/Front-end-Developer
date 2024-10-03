@@ -1,0 +1,53 @@
+
+JS ES6 Modules
+--------------
+
+Modules allow you to break up your code into separate files for functions or variables can be stored in.
+
+This makes it easier to maintain a code -base
+
+Modules are created by using statements are
+
+import:
+   - To import from other modules
+
+export:
+ 
+   - Available for other modules
+
+Note:- 
+
+. Moduels also rely on type="module" in the <script> tag.
+. Modules only work with the HTTP(s) protocol.
+
+.When you import a module into a main javascript file, the module's code is executed first before the code in the main file. This is because the module needs to be evaluated and its exports made available before the main file can use them.
+
+Module Expert
+-------------
+
+Names Export
+// 1. inline - indivudually
+export let name = "congnizant";
+
+// 2. All at once
+const name = "congnizant"
+let year = 2023;
+
+export { name, year };
+
+Default Export | only one in a file
+
+const great = () => {
+    console.log("Good morning");
+}
+export default great;
+
+Module Import:
+=============
+Named exports | import by using curly braces.
+
+import { name, year } from "./module.js";
+
+Default Exports | import without curly braces
+
+import greet from "./greet.js";

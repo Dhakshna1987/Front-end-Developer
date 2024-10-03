@@ -1,21 +1,32 @@
 
+Component:
+----------
 
-Components
-==========
+In React, Everything is a Component. A component is a small, reusable piece of code that represents 
+a part of a user interface.
 
-Components are used to describe a piece of the interface. These are simply Javascript function but it returns a Reace Element.
+Components can be defined as either a class or a function and can include a combination of HTML, CSS and Javascript code
+These components can also be nested and reused thoughout  the application, which makes it easy to manage and maintain 
+the application's user interface.
 
 
-Components Instance
--------------------
+Functional Component:
+--------------------
 
-As components are the description  of a UI so we can think that a component is a template through which the whole appp is made
+Functional component in React are simply Javscript functins that return  a react Element
+They do not have state or lifecycle methods and are used for simple, stateless component.
 
-Properties of a Component Instance
------------------------------------
 
--->Component Instances are actual physical manifestations of a component
+Class Component:
+---------------
+Class component in React are defined using the ES6 class syntax. 
+They have access to state and lifecycle methods and are used for more complex, stateful components
 
--->A Component Instance has its own state and props.
 
---> A Component instance has a lifecycle. i.e it can be born, live and die
+Different:
+----------
+
+The main difference between class and functional Component in React is the functional component are simpler and do not have state or lifecycle methods.
+whereas class components have access state and lifecycle method and more powerful.
+
+Additionaly functional components use hooks for state management.

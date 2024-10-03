@@ -1,23 +1,37 @@
-import { useMemo, useState } from "react";
 
-export function CalculateFactorial(){
-    const [count, setCount] = useState(10);
-    const [arr, setArr] = useState([1,2,3,4,5]);
+import React, { useState, useMemo } from 'react';
 
-    function showMax(){
-        console.log("Changing max")
-        return Math.max(...arr);
-    }
 
-    const memVal = useMemo(() => showMax(), [arr]);
- 
-    return (
-        <>
-        <button onClick={() => setCount(count + 1)}>Add count</button>
-        <button onClick={()=> setArr([...arr, Math.round(count* Math.random())])}>Add to Array</button>
-        <p>{JSON.stringify(arr)}</p>
-        <p>{count}</p>
-        <p>{memVal}</p>
-        </>
-    )
+
+function ExpensiveComponent() {
+  const [number, setNumber] = useState(1);
+  const [text, setText] = useState("");
+
+  // Expensive calculation: factorial
+  const factorial = (n) => {
+    if (n <= 0) return 1;
+    return n * factorial(n - 1);
+  };
+
+  // Use useMemo to memoize the factorial result
+  const memoizedFactorial = useMemo(() => factorial(number), [number]);
+
+  return (
+    <div>
+      <h2>Factorial of {number}: {memoizedFactorial}</h2>
+      <input
+        type="number"
+        value={number}
+        onChange={(e) => setNumber(Number(e.target.value))}
+      />
+      <input
+        type="text"
+        value={text}
+        placeholder="Type something"
+        onChange={(e) => setText(e.target.value)}
+      />
+    </div>
+  );
 }
+
+export default ExpensiveComponent;

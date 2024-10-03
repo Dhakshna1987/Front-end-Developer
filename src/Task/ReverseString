@@ -1,0 +1,30 @@
+function reverseString(str) {
+  // Split the string into an array of characters
+  let splitString = str.split("");
+  
+  // Reverse the array
+  let reverseArray = splitString.reverse();
+  
+  // Join the array back into a string
+  let reversedString = reverseArray.join("");
+  
+  // Return the reversed string
+  return reversedString;
+}
+
+console.log(reverseString("Hello, World!"));  // Output: !dlroW ,olleH
+
+
+
+function reverseString(str) {
+    let reversed = "";
+    
+    for (let i = str.length - 1; i >= 0; i--) {
+      reversed += str[i];
+    }
+    
+    return reversed;
+  }
+  
+  console.log(reverseString("Hello, World!"));  // Output: !dlroW ,olleH
+  

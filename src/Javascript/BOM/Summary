@@ -1,0 +1,104 @@
+
+JS BOM Methods (Browser Object Model)
+--------------
+
+//Browser Window   
+
+. window.innerHeight                                            
+. window.innerWidth
+. window.outerHeight
+. window.outerWeight
+
+. window.moveTo(x,y)
+. window.moveBy(x,y)
+. window.resizeTo(x,y)
+. window.resizeBy(x,y)
+. window.scrollTo(x,y)
+. window.scrollBy(x,y)
+. window.open('url')
+. window.close()
+. window.alert("Message")
+. window.prompt("Message")
+. window.confirm("Message")
+
+Window.screen
+------------
+
+. screen.width
+. screen.height
+. screen.availWidth
+. screen.availHeight
+. screen.colorDepth
+. screen.pixelDepth
+. screen.orientation.type
+
+//window location
+-----------------
+
+. location.host
+. locaito.hostname
+. location.hostpath
+. location.port
+. location.protocol
+. location.hash
+. location.search
+
+.location.reload()
+.location.assign(url)
+.location.replace(url)
+
+//window.history
+---------------
+
+.history.length
+.history.back()
+.history.forward()
+.history.go(number)
+
+//window(Timing)
+----------------
+. setTimeout( fun(), mSecond)
+. setInterval(fun(), mSecond) 
+. clearTimeout(fun(), mSecond) 
+
+//window.navigator
+
+. navigator.geolocation
+. navigator.cookieEnabled
+. navigator.clipboard
+. navigator.onLive
+. navigator.pdfViewerEnabled
+. navigator.mediaDevices
+
+navigator Methods
+-----------------
+
+. navigator.getBattery()
+. navigator.vibrate()
+. navigator.share()
+. navigator.requestMIDIAccess()
+. navigator.canShare()
+. navigator.getGamepads()
+
+
+Javascript cookies
+----------------
+
+cookies are tiny pieces of data a website stores on your computer to remember things like your login, 
+shopping cart details, in the form of name-value pairs like:  username = John Doe
+
+CREATE:
+
+ document.cookie = "name = value; expires="date"; path=/";
+
+READ:
+ let x = document.cookie;  // return all cookies in one string
+
+CHANGE:
+
+same way as you create it & The old cookie is overwritten.
+
+DELETE:
+To delete a cookie, you don't need to specify a value. 
+document.cookie="username=;"
+

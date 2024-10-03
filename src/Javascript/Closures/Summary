@@ -1,18 +1,35 @@
 
-Closures
-=========
+Closure
+=======
 
-Closure means that an inner function always has access to the variable of its outer function, even after the outer function has returned.
+Closure means that an inner function always has access to the variable of its outer function, 
+even after the outer function has returned.
 
-
-
-function outerFunction(){
-    var outerVar = "I'm from the outer function";
-    function innerFunction(){
-        console.localStorage(outerVar)
+function outerFunction() {
+    let outerVariable = 'I am from outerFunction';
+  
+    function innerFunction() {
+      console.log(outerVariable); // innerFunction has access to outerVariable
     }
-    return innerFunction
-}
+  
+    return innerFunction; // return the inner function, creating a closure
+  }
+  
+  const closureFunction = outerFunction(); // Execute outerFunction and store innerFunction
+  closureFunction(); // Call innerFunction, which still has access to outerVariable
+  
 
-var myClosure = outerFunction();
-
+  function createCounter() {
+    let count = 0; // This is the outer variable
+    
+    return function() {
+      count += 1; // The inner function modifies the outer variable
+      return count;
+    };
+  }
+  
+  const counter = createCounter();
+  console.log(counter()); // Output: 1
+  console.log(counter()); // Output: 2
+  console.log(counter()); // Output: 3
+  

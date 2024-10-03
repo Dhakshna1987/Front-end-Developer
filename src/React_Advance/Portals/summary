@@ -1,0 +1,6 @@
+What are React portals, and how do you use them? 
+
+React portals provide a way to render children into a DOM node that 
+exists outside the hierarchy of the parent component. They are 
+useful for modals, tooltips, and other UI elements that need to be 
+visually separate from the rest of the application. 

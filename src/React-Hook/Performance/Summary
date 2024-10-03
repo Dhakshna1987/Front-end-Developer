@@ -1,0 +1,8 @@
+How do you optimize the performance of a React 
+application? 
+
+
+Performance can be optimized using techniques like code splitting, 
+memoization (React.memo, useMemo, useCallback), avoiding 
+unnecessary re-renders, using useEffect with dependencies, and 
+using a proper state management strategy. 

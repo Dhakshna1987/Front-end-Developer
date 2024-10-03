@@ -5,21 +5,27 @@ Higher Order Functions
 
 Higher order are functions that either accept one or more functions as arguments or returns a functions.
 
+(or)
+
+Function which takes another function as an arguments is call Higher Order functions.
+
+
+Call Back Function
+==================
+
+Function which get passed as an arguments to another function is called callback function.
+
 
 Exmaple
 
-function autheticate() {
-    //code to authenticare
+const add = (a, b) => a + b;
+const sub = (a, b) => a - b;
+
+const calculator = (n1, n2, operator) => {
+    return operator(n1, n2);
 }
 
-function authorize(){
-    //code to authorize resource
-}
+console.log(calculator(10, 5, add)); //15
 
-function getData(autheticate, authorize) {
-    if(autheticate()){
-        if(authorize()){
-            //fetch the data
-        }
-    }
-}
+console.log(calculator(10, 5, sub)); //5
+

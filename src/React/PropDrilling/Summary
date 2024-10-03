@@ -1,0 +1,35 @@
+
+What is Prop Drilling?
+----------------------
+
+Prop drilling refers to the process of passing data from a parent 
+component to deeply nested child components via props. It can be 
+avoided using the Context API, which allows you to pass data 
+without passing props through every level of the component tree
+
+Prop Drilling | Example
+
+App
+  |  --ParentComponent
+     | --ChildComponent
+       | --GrandchildCompoent
+
+Prop Drilling | Process
+
+prop drilling process look like:
+
+. App component has the data that GrandChildComponent needs.
+
+. App passes the data as a prop to ParentComponent.
+
+. ParentComponent passes the same data as a prop to ChildComponent
+
+. ChildComponent finally passes the data as a prop to GrandchildComponent.
+
+Solution:
+
+.React Context API or
+. useContext Hook with React
+. Redux
+. Mobx
+

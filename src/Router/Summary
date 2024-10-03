@@ -1,0 +1,26 @@
+Router:
+------
+React Router is a popular library for managing client-side routing in React applications
+React Router is a crucial tool for building dynamic, single-page applications in React. 
+It provides a seamless way to manage navigation, routing, and user interactions within your web application. 
+
+Key Concepts
+------------
+Route:
+ A route is a mapping between a URL and a component. When a user visits a specific URL, React Router renders the corresponding component.
+
+Router: 
+The router is the top-level component that provides the routing infrastructure. In React Router, you typically use BrowserRouter for web applications and HashRouter for static sites.
+
+Nested Routes:
+ React Router allows you to nest routes, creating a hierarchy of components. This is especially useful for layout structures.
+ 
+Link: 
+The Link component enables navigation by creating anchor-like elements that maintain the application's state.
+
+
+Explain the difference between static and dynamic routing in React. ?
+
+Static routing defines routes at build time and does not change, 
+whereas dynamic routing allows routes to be generated dynamically 
+based on application state or user input. 

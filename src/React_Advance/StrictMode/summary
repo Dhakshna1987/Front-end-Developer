@@ -1,0 +1,7 @@
+
+. What is the significance of the StrictMode in React? 
+
+StrictMode is a tool for highlighting potential problems in an 
+application. It activates additional checks and warnings for its 
+descendants, helping to identify unsafe lifecycle methods, legacy 
+API usage, and other issues

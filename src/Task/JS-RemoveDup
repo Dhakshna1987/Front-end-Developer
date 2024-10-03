@@ -1,0 +1,26 @@
+
+// can you sort the array and remove the duplicates based upon id?
+
+const inputArray = [ 
+  { id: 3, name: 'Alice' }, 
+  { id: 1, name: 'Bob' }, 
+  { id: 2, name: 'Charlie' }, 
+  { id: 1, name: 'David' }, 
+  { id: 3, name: 'Alice' },
+];
+
+
+let result = Object.values(inputArray.reduce((acc, cur) => {
+    if(!acc[cur.id]){
+        acc[cur.id] = cur
+    }
+    return acc;
+},{})).sort((a,b) => a.id - b.id);
+
+console.log(result)
+//output
+// [
+//     { id: 1, name: 'Bob' },
+//     { id: 2, name: 'Charlie' },
+//     { id: 3, name: 'Alice' }
+//   ]

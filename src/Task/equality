@@ -1,0 +1,20 @@
+What is equality in JavaScript ?
+
+
+var a = "42";
+var b = 42;
+
+a == b;			// true
+a === b;		// false
+
+[] == ""     // true
+
+
+console.log(false == true) //false
+console.log(false === true) //false
+console.log(true == false) //false
+console.log(true === true) //true
+console.log(false == true) //false
+console.log(true == true) //true
+console.log(false == false) //true
+

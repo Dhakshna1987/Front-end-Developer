@@ -1,0 +1,26 @@
+import { forwardRef } from "react";
+
+useRef()
+=======
+useRef is a hook that allows you to create a reference  to a DOM node or a javascript Object.
+It can be used to access a DOM node directly, or to stroe a value that should not cause a re-render when it changes.
+
+Syntax:
+-------
+//create a useRef instance
+
+const myRef = useRef(initialValue);
+
+//Access and modify the reference
+
+myRef.current = newValue;
+
+. myRef is the object returned by useRef hook.
+. myRef.current is the property you can access and modify. this property holds the value you assigned to it.
+. You can read or modify myRef.current as needed within your componenet.
+
+
+forwardRef
+----------
+A forward ref is a way to pass a ref through a component to a child component.
+It allow you to access the ref of a child component from the parent Component.

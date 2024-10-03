@@ -1,0 +1,14 @@
+indexOf()
+The indexOf() method checks each element and returns the index of the first element that matches the specified value. It searches using strict equality (===) and returns -1 if the specified value does not match any element(s) in the array.
+
+The findIndexOf() method and indexOf() are similar, but findIndexOf() takes a callback function, while indexOf() allows you to directly pass the value you’re looking for.
+
+// Syntax
+myArray.indexOf(item)
+myArray.indexOf(item, start)
+The start parameter is optional, indicating the index position from which the search should begin. When using a negative number, the search begins from the end of the array. By default, its value is 0. Here's an example:
+
+let scores = [23, 56, 67, 22, 45, 57, 45, 7, 5, 34, 7];
+
+console.log(scores.indexOf(7));     // Output: 7
+console.log(scores.indexOf(7, -1)); // Output: 10

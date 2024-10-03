@@ -1,0 +1,42 @@
+
+JS `use strict`
+=============
+
+. 'use strict' is a special directive in javascript that enables stict mode, which enforces stricter rules for writing codes.
+
+. It helps prevent common mistakes, improves code quality, and provides better error handling.
+
+Features of "use strict"
+
+. Undeclared variables
+. Assigning values to read-only properties
+. Duplicate parameter names
+. Using "eval" and "arguments" as variable names.
+
+Declaring Strict Mode
+
+Strict mode is declared by adding "use strict"; to the beginning of a script or a function.
+
+Example
+--------
+
+"use strict";
+
+//1. Undeclared variables 
+
+a = 10;
+function myFunc() {
+    b = 20;
+    return a + b;
+}
+
+console.log(myFunc());
+
+//Error: a and b is not defined.
+
+//2. Assigning values to read-only properties
+
+const insta = "CodeBuster";
+insta = "Huster";
+
+//Error: Assignment to constant variable.

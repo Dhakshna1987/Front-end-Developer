@@ -1,0 +1,48 @@
+
+
+Custom Hook
+-----------
+
+Custom hooks are user-defined functions that allow you to reuse 
+logic across multiple components. They follow the same rules as 
+React hooks and can encapsulate stateful logic
+
+
+Note: Hooks must be called at the top level of a component or custom hook, not like inside loops, and conditions, or 
+nested functions.
+
+import { useState, useEffect } from "react";
+
+const useFetch = (url) => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, [url]);
+
+  return [data];
+};
+
+export default useFetch;
+
+import ReactDOM from "react-dom/client";
+import useFetch from "./useFetch";
+
+const Home = () => {
+  const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
+
+  return (
+    <>
+      {
+        data?.map((item) => {
+          return <p key={item.id}>{item.title}</p>;
+        })}
+    </>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Home />);
+

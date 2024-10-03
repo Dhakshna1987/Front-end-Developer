@@ -1,0 +1,63 @@
+
+useContext()
+------------
+
+The useContext hook allows you to access the value of a context 
+directly in a functional component, making it easier to consume 
+context values without needing a wrapper component.
+
+Context: A way to share data globally for a tree of React Component.
+
+useContext: A hook that lets you consume context values directly.
+
+1. Create the Context
+
+First, you need to create a context using the React.createContext() method.
+This method returns an object with two properties:  Provider and Consumer.
+
+//context.js
+
+import React from 'react';
+const MyContext = React.createContext();
+
+export default MyContext;
+
+2. Provide the Data
+
+Wrap the component(s) that should have access to the shared data with the Provider. This is typically done at the highest level in component tree.
+
+//App.js
+
+import React from 'react';
+import MyContext from "./context";
+import ComponentA from "./ComponentA";
+
+function App() {
+    const shareData = "This data is shared";
+
+    return (
+        <MyContext.Provider value={sharedData}>
+        <ComponentA />
+        </MyContext.Provider>
+    )
+}
+
+export default App;
+
+3. Consume the Data using usecontext
+
+Now, in any component that needs to access the shared data, you can use the useCotext hook to consume the context.
+
+//ComponentA.js
+
+import React, { useContext}  from 'react';
+import MyContext from "./context";
+
+function ComponentA() {
+    const sharedData = useContext(MyContext);
+
+    return <div>{saredData} </div>
+}
+
+export default ComponentA;
+

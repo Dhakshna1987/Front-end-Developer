@@ -10,7 +10,7 @@ JS Functions 6 ways
 -------------------
 
 . Named Functions
-. Anonymous Functions
+. Anonymous Functions(function expression)
 . Arrow Functions
 . Immediately Invoked Function Expressions (IIFE)
 . Higher Order Functions

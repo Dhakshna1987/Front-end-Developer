@@ -1,6 +1,5 @@
 
-How to empty an Array?
----------------------
+// How to empty an Array?
 
 
 let myArray = [1,2,3,4,5];

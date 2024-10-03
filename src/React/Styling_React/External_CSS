@@ -1,0 +1,12 @@
+
+
+External CSS Files
+==================
+
+You can also use traditional external CSS files and import them into your components.
+
+In this case, you import the css file and add the corresponding class names to your JSX elements. The styles defined in the external CSS file will be applied globally.
+
+import "./styles.css";
+
+<div className="container">Hello world </div>

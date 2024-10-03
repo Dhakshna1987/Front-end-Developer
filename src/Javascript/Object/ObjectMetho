@@ -11,9 +11,13 @@ Javascript Object Method:
 3. Object.entries()
 4. Object.assign()
 5. Ojbect.freeze()
-6. Object.is()
-7. Object.defineProperty()
-8. Object.hasOwnProperty()
+6. Object.seal()
+7. Object.is()
+8. Object.defineProperty()
+9. Object.hasOwnProperty()
+10.Object.create()
+11.Object.fromEntries()
+
 
 
 const car = { make : 'Toyota', model: 'Camry'};
@@ -43,20 +47,29 @@ const car = { make : 'Toyota', model: 'Camry'};
  Object.assign()
  ===============
 
- It's like a photocopier for objects. This method is used to copy values from one or more source objects to a target object.
+ It's like a photocopier for objects. This method is used to copy values from one or more source objects to a
+ target object.
   
 const details = {color: 'red'};
-const cardWithDetails = Object.assign(car, details);
+const cardWithDetails = Object.assign({},car, details);
+// const cardWithDetails = Object.assign(car, details);
 console.log(cardWithDetails) // { make : 'Toyota', model: 'Camry', color: 'red' }
 
 Object.freeze()
 ==============
 Think of this as a protective shield for your object.
 
-Once an object is frozen, you can't add, delete, or modify its properties. it's useful when you want to ensure data integrity.
+Once an object is frozen, you can't add, delete, its properties. it's useful when you want to ensure data 
+integrity.
 
 Object.freeze(car);
 car.year = 2000; // Throws an error because car is frozen.
+
+Object.seal():
+-----------
+Prevents adding or removing properties. but allows modification
+
+ex. let obj = {a:1 } // Object.seal(obj);
 
 Object.is()
 ===========
@@ -80,3 +93,8 @@ Object.hasOwnProperty()
 ======================
 This method checks if an object has a specific property as its direct property (not inherited from its prototype).
 console.log(car.hasOwnProperty('make')); // true
+
+Object.fromEntries()
+--------------------
+Creates an object from an array of key-value pairs.car
+ex: Object.fromEntries([['a',1]]); //{a:1}

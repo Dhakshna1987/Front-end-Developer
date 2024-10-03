@@ -1,0 +1,25 @@
+
+useCallback()
+=============
+
+In React, function are recreated on each render.
+
+When you define a function inside a functional component, it gets recreated every time the component re-renders, 
+even if the function body is the same.
+
+This can lead to unnecessary re-rendering of child components that depend on these functions.
+
+Here's where useCallback comes into play.
+
+It allows you to memoize a function so that it's only created once and reused across renders, as long as its dependencies 
+(specified in the second argument) remain the same.
+
+syntax
+--------
+
+const memoizedCB = useCallback(callback, depend);
+
+.callback: The function that you want to memoize
+.dependencies: An array of dependencies. If any of these dependencies change, the memozied callback will be recreated.
+
+ 

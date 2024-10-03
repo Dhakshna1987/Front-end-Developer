@@ -1,0 +1,62 @@
+
+Number Methods
+-------------
+
+.toFixed(): Formats a number to fixed decimal places.
+Examples: let num = 1.2345; num.toFixed(2); // 1.23
+
+.toString(): Converts a number to a string.
+Ex: let num = 123; num.toString(); // "123"
+
+.parseInt(): Parses a string to an isInteger.
+Ex: let num="123"; num.parseInt(); // 123;
+
+.parseFloat(): Parses a string to a floating-point number.
+ex: let num = "12.34"; num.parseFloat(); //12.34
+
+.isNaN(): Checks if a value is NaN(Not a number).
+ex: isNaN("abc"); // true;
+
+.isInteger(): Checks if a value is an interger.
+ex: Number.isInteger(123); // true
+
+.isFinite(): Checks if a value is a finite number.
+
+ ex. isFinite(123): //true
+
+.toExponential(): Converts a number to exponential notation.
+ex. let num = 123; num.toExponential(2); // 1.23e+2
+
+.toPrecision(): Formats a number to a specified length.
+ex. let num = 123; num.toPrecision(2); // 1.2e+2
+
+.valueOf(): Returns the primitive value of a number.
+ex. let num = 123; num.valueOf(); //123
+
+
+. new Number(num) // number object
+
+//String to Number/Float
+
+. Number(string)
+. Number.parseInt(string*, radix)
+. Number.parseFloat(string)
+
+//Returns Boolean True/False
+
+. Number.isInteger(value)
+. Number.isFinite(value)
+. Number.issafeInteger(testValue)
+
+//Fixed-point or exponential notation
+
+. num.toFixed(digit)
+ - 25.6789.toFixed(1) //'25.7'
+
+. num.toPrecision(precision)
+  - 5.123456.toPrecision(2) // '5.1'
+
+. num.toExponential(fractionDigits)
+  - 77.1234.toExponential(2) // 7.7le+1
+
+

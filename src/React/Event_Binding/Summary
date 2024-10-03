@@ -1,0 +1,14 @@
+
+Event Binding
+-------------
+
+In React, Event binding refers to the process of attaching event listeners to DOM Elements or React components to handle user interactions or other events.
+
+When an event occurs, such as a button click or a form submission, the event handler function associated with the event is executed.
+
+Binding in Constructor
+---------------------
+
+You can bind event handlers in the component's constructor 
+
+

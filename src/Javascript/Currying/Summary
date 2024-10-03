@@ -1,0 +1,56 @@
+
+
+Javascript Currying()()
+=======================
+
+Javascript Currying is technique Where a function is transformed into a series of nested functions, 
+each taking a single argument.
+
+The result of this transformation is a chain of functions that can be called one after the other, 
+with each function adding to the behavior of the previous one.
+
+Currying allows you to partially apply a funciton and build up more complex functions from simpler ones.
+
+Single Argument Functions: Each curried function takes only one arguement.
+Returning Functions: A curried function doesn't immediately return a result but another function that can be used later.
+Partial Application: You can call a curried function with one argument to set it and get back a new function that's waiting for the remaining arguments.
+
+chaining: You can chain these functions by calling them one after the other with one argument at a time until you have all the needed arguments. The final call gives you the desired result.
+
+
+//A simple non-curried addition function
+
+function add(x, y) {
+    return x + y
+}
+
+//A curried version of the addition function
+
+function curriedAdd(x) {
+    return function (y){
+        return x + y;
+    }
+}
+
+//Usage of the curried function
+const add2 = curriedAdd(2);
+
+//Partial application with 2 
+
+console.log(add2(3)); // 5 ( 2 + 3)
+
+// You can also chain multiple calls
+
+console.log(curriedAdd(2)(3)); // 5 (2 + 3)
+
+
+//Infinite Currying
+
+function add(a) {
+    return function (b) {
+        if (b) return add(a + b)
+        return a;
+    };
+}
+
+console.log(add(3)(2)(2)(41)());
