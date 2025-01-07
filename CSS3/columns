@@ -1,0 +1,9 @@
+Columns
+
+Enables multi-column layouts for content
+
+
+.content {
+    column-count: 3;
+    column-gap: 20px;
+}

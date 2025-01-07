@@ -1,0 +1,9 @@
+Media Queries
+
+Enables responsive design by applying styles based on screen size or device characteristics.
+
+@media (max-width: 600px) {
+    body {
+        background-color: lightgray;
+    }
+}

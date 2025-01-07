@@ -1,0 +1,14 @@
+
+Backgrounds and Gradients
+
+CSS3 enhances background styling with multiple backgrounds, gradients, and more.
+
+/* Linear Gradient */
+body {
+    background: linear-gradient(to right, red, yellow);
+}
+
+/* Multiple Backgrounds */
+.element {
+    background: url('image1.png'), url('image2.png');
+}

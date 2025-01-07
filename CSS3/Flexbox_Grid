@@ -1,0 +1,21 @@
+
+
+
+Flexbox and Grid Layout
+
+Simplifies layout design for web pages.
+
+
+/* Flexbox Example */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Grid Example */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}

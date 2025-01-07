@@ -1,0 +1,11 @@
+Custom Fonts (Web Fonts)
+
+Uses @font-face to include custom fonts.
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('myfont.woff2') format('woff2');
+}
+body {
+    font-family: 'MyFont', sans-serif;
+}

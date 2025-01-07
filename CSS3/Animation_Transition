@@ -1,0 +1,26 @@
+
+
+Animations and Transitions
+
+Adds motion to elements.
+
+/* Transition */
+button {
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: orange;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.animated {
+    animation: slideIn 1s ease-in-out;
+}
