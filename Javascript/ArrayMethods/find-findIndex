@@ -1,0 +1,32 @@
+find()
+The find method is also similar to the some() method but doesn’t return a boolean. It will instead return the first
+element that passes a test. Like the some() and every() method, it also executes the callback function for every 
+element and will return undefined if no element passes the test. It's syntax is also similar to both methods.
+
+// Syntax
+myArray.find(callbackFn)
+
+let students = [
+    { name: "John Doe", age: 22 },
+    { name: "Jane Doe", age: 33 },
+    { name: "Karl Don", age: 21 }
+];
+
+console.log(students.find((student) => student.name === "John Doe").age); // 22
+
+
+findIndex()
+This method is very similar to the find() method, but this time, instead of returning the element, 
+it returns the index (position) of the first element in the array that passes the test function. 
+It will return -1 if nothing matches. Its syntax is similar to the find() method.
+
+// Syntax
+myArray.findIndex(callbackFn)
+
+let students = [
+    { name: "John Doe", age: 22 },
+    { name: "Jane Doe", age: 33 },
+    { name: "Karl Don", age: 21 }
+];
+
+console.log(students.findIndex((student) => student.name === "Jane Doe")); // 1

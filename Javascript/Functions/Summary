@@ -1,0 +1,78 @@
+
+Function
+---------
+
+A JavaScript function is a block of code designed to perform a particular task.
+
+A JavaScript function is executed when "something" invokes it (calls it).
+
+JS Functions 6 ways
+-------------------
+
+. Named Functions
+. Anonymous Functions(function expression)
+. Arrow Functions
+. Immediately Invoked Function Expressions (IIFE)
+. Higher Order Functions
+. Constructor Functions
+
+Named Functions:
+----------------
+Lacacy / Traditional way
+
+function myFunction() {
+    console.log("hello");
+}
+
+myFunction();
+
+Anonymous Functions:
+--------------------
+
+Anonymous Functions | without name, used as function expression or a arguements
+
+let great = function (name) {
+    console.log(`hello ${name}`)
+}
+
+great("Saranya");
+
+Arrow Functions
+---------------
+Arrow functions introduced in ES6, Shorter Syntax & one-lined functions
+
+const great = () => console.log("Hello);
+
+great();
+
+IIFE Functions
+--------------
+Immediately Invoked Function Expression (IIFE) Executed immediately after their creation. Used to create private scopes and avoid polluting the global namespace
+
+(function () {
+    let str = "Good morning"
+    console.log(str);
+})();
+
+Higher Order Function
+---------------------
+Functions that take one or more functions as arguments or return a function.
+
+let arry = [10,20,30];
+
+let newarry = arry.map((element) => element + 10 )
+console.log(newarry);
+
+
+Constructor Function
+--------------------
+Used as blueprints for creating objects with similar properties and methods. They are invoked using the new keyword to create instance of objects.
+
+function Person(name, place) {
+    this.name = name;
+    this.place = place;
+}
+
+let user1 = new Person("rowdy", "India");
+
+console.log(`Hello everyone this is ${user1.name}, and i am from ${user1.place}`)

@@ -1,0 +1,47 @@
+filter()
+--------
+The filter() method traverses the entire array, selecting elements that meet a specified condition, 
+and returns them in a new array.
+
+// Syntax
+myArray.filter(callbackFn)
+In the callback function, you have access to each element, its index, and the original array itself. For example:
+
+let students = [
+    { name: "John Doe", age: 22 },
+    { name: "Jane Doe", age: 33 },
+    { name: "Karl Don", age: 21 }
+];
+
+console.log(students.filter((student) => student.age < 30));
+
+// [
+//     { "name": "John Doe", "age": 22 },
+//     { "name": "Karl Don", "age": 21 }
+// ]
+
+
+forEach()
+---------
+The forEach() method loops through all array elements and calls a function (callback function) for each element. 
+The callback function has access to the current element, index, and the entire array on every loop.
+
+// Syntax
+myArray.forEach(callbackFn)
+For example:
+
+let staff = [
+    { name: "John Doe", salary: 120 },
+    { name: "Jane Doe", salary: 350 },
+    { name: "Karl Don", salary: 710 }
+];
+
+let totalSalary = 0;
+
+staff.forEach((staffPerson) => {
+    totalSalary += staffPerson.salary;
+});
+
+console.log(totalSalary); // Output: 1180
+
+// forEach() doesn't execute the function for empty elements

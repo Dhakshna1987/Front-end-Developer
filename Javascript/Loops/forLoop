@@ -1,0 +1,36 @@
+
+For Loop
+========
+
+. The Javascript for loop interates the elements for the fixed number of times.
+. It should be used if numer of iteration is known. 
+
+//syntax
+
+for (initialization; condition; iteration;)
+
+
+=> initialExpression: 
+   The initialExpression executes once while entering the loop.
+
+=> condition: 
+   Checked before every loop iteration. If false, the loop is stop. 
+
+=> iteration:
+   Executes after the body on each iteration.
+
+//example
+
+for(let i = 1; i <= 5; i++){
+    console.log(i) 
+}
+console.log("done")
+
+//output
+
+1
+2
+3
+4
+5
+Done

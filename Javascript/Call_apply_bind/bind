@@ -1,0 +1,40 @@
+
+bind() Function
+---------------
+The bind method is used to create a new function that, when invoked has a specified this value and optional arguements.
+
+Syntax:
+-------
+
+function.bind(thisArg, arg1, arg2, ...)
+
+*create a new funciton
+
+
+Example
+------
+const person = {
+    fullName: function ( location, rollNo) {
+        return `${this.firstName} ${this.lastName} from ${location}, RollNo ${rollNo}`
+    }
+};
+
+const person1 = {
+    firstName: "Arjun",
+    lastName: "Doss"
+};
+
+const person2 = {
+    firstName: "Kamal",
+    lastName: "Hassan"
+};
+
+
+//Bind | Returns Functions
+let result1 = person.fullName.bind(person1, ["Bangalore", 34]) 
+console.log(result1) // Arjun Doss from Bangalore, RollNO 34
+
+let result2 = person.fullName.bind(person2, ["Chennai", 30]) 
+console.log(result2) // Kamal Hassan from Chennai, RollNo 30
+
+

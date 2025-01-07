@@ -1,0 +1,63 @@
+Scope
+=====
+
+Scope determines the accessibility of variables, objects and functions.
+
+.In Javascript a variable has 3 types of Scope
+  . Block Scope
+  . Function Scope
+  . Global Scope
+
+
+  Global Scope:
+  -------------
+
+  A Javascript global scoped variable is defined outside the function and block.
+
+  Such variable is accessible anywhere in the code.
+
+
+  Example:
+   
+   let name = 'John'
+   let age = 24
+
+   function myName(name) {
+    console.log(name)
+   }
+
+  myName(); // John
+
+   if(2 < 4) {    
+    console.log(age) //24
+   }
+
+   Function Scope
+   =============
+
+   A variable is said to be function scoped if it is defined within a funciton
+
+   Var is a function scoped. i.e you can to access it outside the function
+
+   function intro () {
+    var age  = 26
+    console.log(age)
+   }
+
+   intro() // 26
+
+   console.log(age) // age is not defined
+
+   Blocked Scope
+   =============
+
+   The block scope of a variable means that variable is accessible within the block that is between the curly braces
+
+   You can't access it outside the block
+
+   if( 2 < 3) {
+    const name = "rose"
+    console.log(name); // rose
+   }
+
+   console.log(name) // name is not defined

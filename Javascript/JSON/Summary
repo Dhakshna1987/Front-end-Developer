@@ -1,0 +1,67 @@
+
+What Is JSON
+-------------
+
+-> JSON (Javascript Object Notation) is a lightweight human-readable data interchange format commonly used for transmitting and storing data.
+-> It is widely used in web applications and has become a popular choice for representing structured data.
+-> JSON syntax is derived from Js, but it is language-independent, meaning it can be used with any programming language. It uses key-value pairs to organize data into a hierachical structure.
+
+JSON | Object
+------------
+
+An object is an unordered collection of key-value pairs enclosed in curly braces {}.
+
+Each key is a string, followed by a colon:, and then a value pairs are separated by commas. Objects allow you to represent complex data structure.
+
+{
+    name: "code tech",
+    Year: 2022,
+    city: "Chennai"
+}
+
+JSON | Array
+------------
+An array is an ordered collection of values enclosed in square brackers. []
+
+Values in an array can be of any valid JSON type, including objects, arrays, numbers, strings, booleans, and null. 
+
+Array elements are separated by commas.
+
+["applie", "banana", "orange"]
+
+JSON | Differenct Values
+
+1. String
+
+string values should be enclosed in double quotes("). Single quotes(') are not considered valid for defining string values in JSON.
+
+2. number
+
+JSON doesn't differentiage between  different number format (e.g., integers, floats, scientific, notation).
+
+3. Boolean -- true, false
+
+4. null
+
+JSON Methods
+============
+
+JSON.stringfy()
+--------------
+This method converts a javascript value(Json object) to a JSON string representation.
+let obj = {name: "Tendulkar", age: 40};
+let jsonString = JSON.stringify(obj);    
+    
+console.log(jsonString); // output: {"name":"Tendulkar", "age": "40"}
+
+JSON.parse()
+-----------
+This method takes a Json string and transform it into a Javascript object.
+
+ 
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+
+Error Object
+------------
+
+Javascript provides built-in error objects that represent different types of errors.
+
+These objects, such as Error, TypeError, ReferenceError, etc, have properties like message and name, which can provide valuable information about the error.
+
+Error Objects
+-------------
+-> Error. The base error object from which other error objects inherit. It provides a name and message property that contain information about the error.
+
+-> TypeError: Represents an error when a value is not of the expected type.
+
+-> SyntaxError: Occurs when there is a syntax error in the code.
+
+-> ReferenceError: Indicates an invalid reference, typically when trying to access an undeclared variable or non-existing object.
+
+-> RangeError: Occurs when a numeric value is outside the range of acceptable values.
+
+-> EvalError: Represents an error that Occurs during the eval() function's execution
+
+-> URIError: Indicates an error when working with malformed URIs.

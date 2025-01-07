@@ -1,0 +1,34 @@
+
+call() Function
+===============
+
+. The call method is used to invoke a function with a specified "this" "value and a list of arguements (parameters)
+
+syntax:
+
+function.call(thisArg, arg1, arg2, ....)
+
+.The first argument (thisArg) specified the value of "this" within the function when it is invoked.
+
+Example
+------
+const person = {
+    fullName: function ( location, rollNo) {
+        return `${this.firstName} ${this.lastName} from ${location}, RollNo ${rollNo}`
+    }
+};
+
+const person1 = {
+    firstName: "Arjun",
+    lastName: "Doss"
+};
+
+const person2 = {
+    firstName: "Kamal",
+    lastName: "Hassan"
+};
+
+
+console.log(person.fullName.call(person1, "Bangalore", 34)) // Arjun Doss from Bangalore, RollNO 34
+console.log(person.fullName.call(person2, "Chennai", 30)) // Kamal Hassan from Chennai, RollNo 30
+

@@ -1,0 +1,42 @@
+
+Conditional Statement
+=====================
+
+if Statement
+
+if (condition) {
+
+}
+
+if ...else Statement
+
+if (condition) {
+ // if condition is True
+} else {
+  // if condition is False
+}
+
+else if Statement
+
+if (condition1) {
+    //if condtion1 is True
+} else if (condtion2) {
+    // if condition2 is True
+} else {
+    //if all condition is false
+}
+
+switch Statement
+
+switch (expression) {
+    case value1: 
+      // if expression matches value1
+     break;
+    
+     case value2: 
+      // if expression matches value2
+     break;
+
+     default:
+     // if none of cases matches
+}

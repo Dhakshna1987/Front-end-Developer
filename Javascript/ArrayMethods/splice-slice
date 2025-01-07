@@ -1,0 +1,45 @@
+splice()
+
+The splice() method adds or removes specific element(s) from an array. When removing elements, 
+it returns the removed element(s) in an array, and when adding elements, it returns an empty array.
+
+myArray.splice(index, howMany, element1, element2, ..., elementX);
+
+
+In the above syntax, index is a required parameter representing the position where you want to add or remove elements.
+ howMany is an optional parameter indicating the number of elements to be removed. 
+Any other parameter is optional and represents the new element(s) you want to add to the specified position.
+
+// Remove third fruit
+fruits.splice(2,1); // ['Lime']
+console.log(fruits); // ["Mango", "Strawberries", "Oranges", "Pomegranate"]
+
+// Remove the first and second fruits
+fruits.splice(0,2); // ['Mango', 'Strawberries']
+console.log(fruits); // ["Oranges", "Pomegranate"]
+
+
+// Add to the first position without removing any elements
+fruits.splice(0, 0, "Grape"); // []
+console.log(fruits); // ['Grape', 'Mango', 'Strawberries', 'Lime', 'Oranges', 'Pomegranate']
+
+// Add to the fifth and sixth position by replacing them with new fruits
+fruits.splice(4, 2, "Bananas", "Avocado"); // ['Oranges', 'Pomegranate']
+console.log(fruits); // ['Grape', 'Mango', 'Strawberries', 'Lime', 'Bananas', 'Avocado']
+
+
+slice()
+The slice() method takes the specified element(s) from one array into a new one without changing the original. 
+This method takes two optional parameters: the start and end positions. By default, the start is 0, 
+while the end is your array’s last element.
+
+// Syntax
+myArray.slice(start, end)
+
+let countries = ['Germany', 'Poland', 'Sweden', 'Ghana', 'Nigeria', 'South Africa'];
+
+let euroCountries = countries.slice(0, 3);
+console.log(euroCountries); // ['Germany', 'Poland', 'Sweden']
+
+let africanCountries = countries.slice(3);
+console.log(africanCountries); // ['Ghana', 'Nigeria', 'South Africa']

@@ -1,0 +1,21 @@
+pop()
+
+This method removes the last element of the array, altering the original array, and returns the removed element.
+
+let names = ["John Doe", "Jane Doe", "Ann Doe"];
+names.pop(); // "Ann Doe"
+console.log(names); // ['John Doe', 'Jane Doe']
+
+
+push()
+
+This method adds new element(s) to the end of the array, changing the original array, and returns the new length of the
+array. This method accepts the elements you wish to add at the end of the array as parameters.
+
+myArray.push(element1, element2, ..., elementX);
+Let’s now create a new array of scores and then add more scores to the array using the push() method:
+
+let scores = [12, 55, 78, 95, 33];
+scores.push(66, 77); // 7
+
+console.log(scores); // [12, 55, 78, 95, 33, 66, 77]

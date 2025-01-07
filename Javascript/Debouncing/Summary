@@ -1,0 +1,48 @@
+
+
+Javascript Debouncing
+---------------------
+
+. Javascript debounce is a technique used to manage how frequently a function is trigged in response to rapidly occurring events, 
+such as a user typing in a search box or clikcing button multiple times.
+
+Normal Behavior
+---------------
+
+Without debounce, a function linked to an event (like typing in a search box) runs every time the event occurs. 
+
+For example, while typing the function may run with every keystroke, leading to unnecessary
+
+With Debouncing
+-------------
+Debouncing adds a delay before executing a function when an event occurs.
+
+If the event happens again during this delay, the timer resets. The function only runs when the timer finishes without being reset
+
+This ensures smoother performance when events occur rapidly.
+
+Examples:
+
+
+
+//Debounce function
+function debounce(eventFunc, delay ) {
+    let timer;
+    return function () {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            eventFunc.call(this);
+        }, delay)
+    };
+}
+
+//Event Function
+
+let eventHandler = () => console.log("Searching ...");
+
+
+//EventListener
+
+let userInput = document.querySelector('#userInput');
+
+userInput.addEventListener('input', debounce(eventHandler, 800));

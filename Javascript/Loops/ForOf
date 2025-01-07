@@ -1,0 +1,18 @@
+
+
+for of loop
+-----------
+
+This loop is used to iterate over the values of an iterable object, such as an array or a string
+
+//syntax
+
+for (variable of iterable){
+    //code to be executed for each Element
+}
+
+let arry = [10,20,30,40];
+
+for (let e of arry) {
+    console.log( e + 5); // 15 25 35 45
+}

@@ -1,0 +1,58 @@
+
+Javascript DOM
+--------------
+
+. Accessing Elements
+
+Javascript DOM Tree
+--------------------
+
+DOM Tree refers to the HTML page where all the nodes objects.
+
+There can be 4 major main types of nodes in the DOM.
+
+1. Text nodes
+2. Element nodes
+3. Comment nodes
+4. WhiteSpace nodes
+
+
+Child nodes
+----------
+. childNodes: Returns a collection of child nodes of an element.
+. firstChild: Returns the first child node of an element.
+. lastChild: Returns the last child node of an element.
+. children: Returns a colletion of child element nodes of an element
+. firstElementChild: Returns the first child element node of an element.
+. lastElementChild: Returns the last child element node of an element.
+
+Sibling Nodes
+--------------
+. nextSibling: Returns the next sibling node of an element
+. previousSibling: Returns the previous sibling node of an element
+. nextElementSibling: Returns the next sibling element node of an element
+. previousElementSibling: Returns the previous sibling element node of an element
+
+Descendant Nodes
+----------------
+. querySelectorAll(selector)
+  Retrieves a collection of elements that match the given CSS selector.
+
+. querySelector(selector)
+  Retrieves the first element that matches the given CSS selector.
+
+Ancestors
+----------
+
+. closest(selector)
+  Retrieves that closest ancestor element that matches the given CSS selector.
+
+  Search Elements In DOM  
+  ----------------------
+  . getElementById: Retrieves an element with the given ID
+  . getElementsByClassName: Retrieves a collection of elements with the given class name.
+  . getElementsByTagname: Retrieves a collection of elements with the given tag name.
+  . getElementsByName: Retrieve a collection of elements with a specified name attributes value
+
+  
+ 

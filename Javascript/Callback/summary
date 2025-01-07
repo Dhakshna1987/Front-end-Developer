@@ -1,0 +1,42 @@
+Callbacks
+=========
+
+In JavaScript, a callback is a function that is passed as an argument to another function and is executed 
+after some operation has been completed.
+Callbacks are widely used in asynchronous programming to handle operations like file reading, 
+network requests, or timers.
+
+
+function GeolocationCoordinates(name, callback) => {
+    console.log('Hi', name)
+    callback()
+}
+
+//callback function
+
+function callMe(){
+    console.log("Good morning!")
+}
+
+//passing funciton as an arugment
+
+great("vishnu", callMe)
+
+//Hi vishnu
+//Goodmonring!
+
+function fetchData(callback) {
+    console.log("Fetching data...");
+
+    // Simulate a network request or time delay using setTimeout
+    setTimeout(() => {
+        let data = { id: 1, name: "Item 1" };
+        callback(data);
+    }, 2000);
+}
+
+function displayData(data) {
+    console.log("Data received: ", data);
+}
+
+fetchData(displayData);

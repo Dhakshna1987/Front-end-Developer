@@ -1,0 +1,30 @@
+
+Manipulating Content
+--------------------
+
+Techniques for manipulationg DOM content using Javascript
+
+. innerHTML
+. outerHTML
+. innerHTML
+. textContent
+. hidden
+
+innerHTML
+---------
+
+This property sets or returns the HTML content (innerHTML) of an element
+
+Note: Is valid only for element nodes
+
+//returns innerHTML property
+element.innerHTML;
+
+//set the innerHTML property
+
+element.innerHTML = text;
+
+Example
+--------
+<h1>Heading</h1>
+element.innerHTML = "<i>Italic Heading</i>"

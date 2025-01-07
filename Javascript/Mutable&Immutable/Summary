@@ -1,0 +1,46 @@
+
+Mutable & Immutable
+===================
+
+In Js, mutable and Immutable refer to the ability of an object or a value to be changed after it has been created.
+
+mutable
+-------
+objects can be modified
+
+Immutable
+---------
+
+objects cannot be modified after they have been created.
+
+Mutable Example
+---------------
+let mutableArr = [1, 2, 3];
+mutableArr.push(4);
+
+Immutable Example
+-----------------
+
+let immutableStr = "hello";
+let newImmutablestr = immutableStr.toUpperCase();
+
+console.log(immutableStr); //hello
+console.log(newImmutableStr): //Hello
+
+Mutable Methods
+---------------
+. Array.push()
+. Array.splice()
+. Array.sort()
+. Object.assign()
+
+Immutable methods
+------------------
+
+. Array.concat()
+. Array.filter()
+. Array.map()
+. Object.freeze()
+
+
+

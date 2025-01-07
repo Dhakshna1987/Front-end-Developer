@@ -1,0 +1,36 @@
+const { type } = require("@testing-library/user-event/dist/type")
+
+JS Operators:
+============
+
+Arithimetic
+----------
++, - , *, /, %, **, ++, __
+ 
+i.e  5**2 = 5square of 2 = 25
+Assignment
+----------
+=, +=, -=, *=, /=, %=, **+
+
+i.e a+=b   --> a = a + b
+
+Comparison
+----------
+==, ===,  !=, !==, >, <, <=, >=  
+i. e value & type
+
+Logical
+--------
+
+&&, ||, and !
+
+typeof
+-------
+
+Returns the type of variable
+
+instanceof
+----------
+Returns true if an object is an instance of an object type
+
+

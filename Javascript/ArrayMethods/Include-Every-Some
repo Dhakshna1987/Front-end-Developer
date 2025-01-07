@@ -1,0 +1,50 @@
+includes()
+---------
+As the term suggests, the includes() method checks through an array to see if the array contains a specified value.
+If it contains that value, it returns true – if not, it will return false.
+ The method accepts two parameters: the specific value, and the optional start position.
+
+// Syntax
+myArray.includes(value, start)
+Suppose you have an array of fruits. Let’s check if the array includes “Apple”:
+
+let fruits = ["Apple", "Strawberries", "Mango", "Lime", "Oranges"];
+
+console.log(fruits.includes("Apple")); // true
+console.log(fruits.includes("Apple", 3)); // false
+
+
+
+every()
+-------
+The every() method executes a function for each element of an array in the form of an evaluation. 
+It returns true if all the array elements pass the evaluation and returns false (and stops execution) 
+if at least one element fails the evaluation. This method uses a callback function as an argument which is evaluated 
+for each element.
+
+// Syntax
+myArray.every(callbackFn)
+Suppose you have an array of users’ ages, and you want to check if all the users are below 50 years old:
+
+let usersAge = [22, 56, 75, 33, 22, 80, 12, 43, 23];
+
+console.log(usersAge.every((age) => age < 50)); // false
+
+
+some()
+The some() method is very similar to the every() method, but this time returns true and stops execution 
+if it passes the evaluation for one of the array elements. It will return false if all the elements fail the evaluation.
+
+// Syntax
+myArray.some(callbackFn)
+In the callback function, you have access to each element, the index, and the original array itself:
+
+// Normal function
+myArray.some(function(element, index, array){ /* ... */ })
+
+// Arrow function
+myArray.some((element, index, array) => { /* ... */ })
+
+let usersAge = [22, 56, 75, 33, 22, 80, 12, 43, 23];
+
+console.log(usersAge.some((age) => age > 50)); // true

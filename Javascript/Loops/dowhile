@@ -1,0 +1,25 @@
+
+
+do-while Loop
+===========
+
+do-while loop will execute the body first, then later checks the condition & while its truthy executes again and again
+
+
+//syntax
+
+do{
+    //Code to e executes once
+
+}while (condtion) // if true runs again
+
+//example
+
+let count = 0;
+
+do {
+    console.log(count);
+
+    count++;
+
+} while(count < 5)

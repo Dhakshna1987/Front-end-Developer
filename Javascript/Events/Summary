@@ -1,0 +1,62 @@
+
+Events
+------
+
+Events in Javascript are actions or occurrences that happen in a web browser, such as a click, key press, or form submission.
+
+The events can be categorized into four main groups
+
+.Mouse events
+.Keyboard events
+.Form Events 
+.Document/window events
+
+Mouse Events
+============
+. Click | On left-click
+. contextmenu | On double clicks
+. dblclick | on double click
+. mousedown | Mouse btn press down
+. mouseup | Released btn over elmn
+. mouseenter | Pointxter moved on elm
+. mouseleave | Pointer moved out elm
+. mouseout | Pointer moved out
+. mouseover | Pointer moved onto
+. mousemove | Pointer moving over
+. wheel | Wheel rolls Up/Down
+
+
+Keyboard Events
+==============
+. keydown | A user presses a key
+. keyup  | A user releases a key
+
+Keyboard Event Properties
+--------------------------
+.Key | key value pressed / released key
+. code | Pressed /released key code
+. shiftkey, ctrlKey, altkey, metaKey | returns Boolean (true/false)
+. repeat | if a key is being hold down repeatedly, or not (Returns Boolean)
+
+Form Events
+-----------
+. blur | Element loses focus
+. focus | Element gets focus
+. change | Value of d elmt is changed.
+. input | When elmt ets user input
+. invalid | When an element is invalid
+. search | User writes something in a search field ( for <input="search">)
+. select | Fires after some text has been selected in an element.
+. submit | When a form is submitted
+. reset | Reset btn in a form is called
+
+Clipboard Events
+----------------
+. copy | User copies elm content
+. cut | User cuts the elm content
+. paste | User pastes content in elm
+
+Misc Event
+-----------
+. toggle | Fires when the user opens or closes the <details> element
+

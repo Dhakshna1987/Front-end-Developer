@@ -1,0 +1,34 @@
+
+apply()
+=======
+
+The apply method is similar to call, but it takes an array-like object of arguements instead of individual arguements.
+
+Syntax
+-------
+
+function.apply(thisArg, [arg1, arg2, ...])
+
+
+Example
+------
+const person = {
+    fullName: function ( location, rollNo) {
+        return `${this.firstName} ${this.lastName} from ${location}, RollNo ${rollNo}`
+    }
+};
+
+const person1 = {
+    firstName: "Arjun",
+    lastName: "Doss"
+};
+
+const person2 = {
+    firstName: "Kamal",
+    lastName: "Hassan"
+};
+
+
+console.log(person.fullName.apply(person1, ["Bangalore", 34])) // Arjun Doss from Bangalore, RollNO 34
+console.log(person.fullName.apply(person2, ["Chennai", 30])) // Kamal Hassan from Chennai, RollNo 30
+

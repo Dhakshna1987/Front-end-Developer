@@ -1,0 +1,54 @@
+
+
+JS Date Methods
+---------------
+
+-> Javascript stores dates as milliseconds since Jan 1, 1970
+
+-> One day is 86,400,000 milliseconds.
+
+-> Dates are displayed in the brower's time zone at text strings.
+
+-> new Date() to create a date object with the current date & time.
+
+//To make date object
+-> const now = new Date(); Returns current date & time also able to add | e.g : now.setDate()
+
+//get Methods
+-------------
+-> Date
+. getDate()
+. getFullYear()
+. getMonth()
+. getDay()
+
+Time
+----
+. getTime()
+. getHours()
+. getMinutes()
+. getSeconds()
+. getMilliseconds()
+
+//Set Method
+------------
+Date
+. setDate()
+. setFullYear()
+. setMonth()
+
+
+Time
+----
+
+. setTime()
+. setHours()
+. setMinutes()
+. setSeconds()
+. setMilliseconds()
+
+. toDateString()
+. Date.now()
+. Date.parse()
+. toJSON()
+

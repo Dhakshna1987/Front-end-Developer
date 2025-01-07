@@ -1,0 +1,31 @@
+
+LocalStorage
+============
+
+LocalStorage is a Web API provided by modern browsers that allows web applications to store key-value paris locally on the user's computer.
+
+And you can retrieve them even after the browsers has been closed and reopended.
+
+LocalStorage Method
+-------------------
+
+setItem(key, value)
+-> stores a key-value paris
+
+getItem(key)
+-> retrieves the value associated with a key in LocalStorage
+
+removeItem(key) 
+-> removes the key-value pair associated with a key
+
+clear()
+-> removes all key-value pairs from LocalStorage.
+
+LocalStorage Properties
+-----------------------
+.length
+  -> returns the number of key-value pairs stored in LocalStorage.
+
+example -> localStorage.key(0) returns the name of the first key, 
+           localStorage.key(1) returns the names of the second key, and so on
+           

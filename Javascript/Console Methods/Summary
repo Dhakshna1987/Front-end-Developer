@@ -1,0 +1,54 @@
+
+
+Javascript Console Commands
+===========================
+
+
+1.console.log()
+
+->> Prints a message to the console
+
+2. console.error()
+ Highlighting error;
+
+->> Display an error message to console
+
+3. console.table() - 
+ --> Display data in a table format
+
+ let users = [
+    { name : "Alice", age : 25},
+    { name : "Bob", age : 22}
+ ];
+
+ console.table(users);
+
+ 4. console.group() and console.groundEnd()
+
+ Groups related loggin statements together
+
+ console.group("User Details");
+ console.log("Name: Alice");
+ console.log("age: 28");
+ console.groupEnd();
+
+ 
+ console.group("Purchase History");
+ console.log("Product: Laptop");
+ console.log("Price: $1200");
+ console.groupEnd();
+
+ 5. console.asserts()
+  --> Conditional Logging
+  --> Logs a message if the provided assertion is false.
+
+  let age = 15;
+
+  console.asserts( age >= 18, "User is not an adult!")
+
+6. console.clear()
+
+ -- Cleaning Up
+ -- clear the console
+ 
+

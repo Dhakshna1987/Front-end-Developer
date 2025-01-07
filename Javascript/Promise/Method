@@ -1,0 +1,17 @@
+Promise Methods
+---------------
+
+Promise.all(iterable)
+Promise.allSettled(iterable)
+Promise.race(iterable)
+Promise.any(iterable)
+Promise.resolve(value)
+Promise.reject(error)
+
+
+Promise.catch(onRejected)
+Promise.finally(onfinally)
+Promise.then(Resolve, Reject)
+
+
+ 

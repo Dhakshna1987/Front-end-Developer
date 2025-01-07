@@ -1,0 +1,34 @@
+Hoisting
+=========
+
+Hoisting in Javascript is a behavior in which a function or variable can be used before declaration.
+
+. In terms of variable and constant keyword var is hoisted, and let and const doesn't allow hoisting.
+
+
+Key Takeaways:
+Function declarations are fully hoisted (both declaration and definition).
+Variables declared with var are hoisted, but their initialization is not.
+Variables declared with let and const are hoisted, but they cannot be accessed before initialization (due to TDZ)
+
+
+hoistedFunction(); // This works because function declarations are hoisted
+
+function hoistedFunction() {
+  console.log("Hoisting works for function declarations!");
+}
+
+
+//Example with var
+console.log(x) //undefined
+var x = 10;
+
+//Example with let
+console.log(x) //throw an error
+let x = 10;
+
+//Example with const 
+console.log(x) //throw an error
+const x = 10;
+
+
