@@ -1,0 +1,13 @@
+Redux thunk
+-----------
+
+Redux Thunk is a middleware for Redux that allows you to write action creators that return a function instead of an
+action. This is particularly useful for handling asynchronous logic (like API calls) in a Redux application.
+
+
+How Redux Thunk Works
+
+Without Thunk: Action creators return plain action objects (synchronous).
+
+With Thunk: Action creators return a function (instead of an object), and inside that function, 
+you can perform asynchronous operations and dispatch actions when needed.

@@ -1,0 +1,17 @@
+
+Redux-Saga;
+
+redux-saga is a library that allows you to handle side effects in the redux application by using generator functions.
+It provides way to handle async actions and to separate the logic for handling side effects from the rest of the app.
+
+The main idea behind Redux-Saga is to have sagas that listen to Redux actions and decide when to run side effects. 
+These sagas are functions that yield objects to the middleware, which interprets the yielded objects and performs 
+the necessary operations like dispatching actions, making API calls, etc.
+
+Key Concepts of Redux-Saga:
+Effect: Describes side effects (e.g., making an API call).
+Watcher Sagas: Listen for dispatched actions and start worker sagas.
+Worker Sagas: Perform the side effects when a particular action is dispatched.
+yield: A way to pause the generator function.
+
+

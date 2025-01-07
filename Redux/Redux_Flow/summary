@@ -1,0 +1,30 @@
+
+
+Actions 
+-------- 
+Actions are used to send data from the application to the Redux store.
+A typical action consists of the type property and an optional payload property.
+
+Reducers 
+-------
+— This is a function that accepts the current state and action as arguments and 
+returns the updated state according to the action.
+
+Store 
+----
+— This is the heart of Redux where the state is stored. 
+The state is kept in plain JavaScript objects and arrays.
+
+
+Middleware
+-----------
+Middleware in Redux is a function that sits between the action being dispatched and the action reaching the reducer
+
+Each middleware function receives the `store`’s `dispatch` and `getState` methods, allowing it to interact with the state and dispatch new actions.
+
+Thunks: 
+-------
+Thunks are a way to write async logic that interacts with the Redux store. They allow you to dispatch actions and access the state.
+
+
+
