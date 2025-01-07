@@ -1,0 +1,54 @@
+
+
+useEffect()
+==========
+The useEffect hook is used to perform side effects in functional components, such as data fetching,
+subscriptions, or manually updating the DOM. It runs after every render by default but can be 
+controlled using dependencies. 
+
+Syntax
+------
+
+useEffect(<function>, <dependency>)
+
+
+useEffect accepts two arguments. The second arguments is optional.
+
+Common use cases for useEffect:
+=============================
+. Data Fetching
+. DOM Manipulation
+. Subscriptions
+. Timers and Intervals.
+. Cleanup Tasks
+
+How to work useEffect?
+======================
+. If the dependancy is empty.
+. If the no dependancy.
+. If the dependancy with variables.
+
+
+useEffect(<function>, <dependency>)
+
+The first argument of useEffect is the effect function. 
+This function is called after the component has rendered. and it's where you place the code for your side effect.
+It can be an asynchronous function, and you can perform any asynchronous operations like data fetching inside it. 
+
+The second argument of useEffect is an array of dependencies. This array tells React when to re-run the effect and
+ its optional.
+
+useEffect(() => {
+    console.log("Effect dependancy is empty" )
+},[]);
+
+useEffect(() => {
+    console.log("Effect no dependancy is empty" )
+});
+
+useEffect(() => {
+    console.log("Effect dependancy is empty" )
+},[variable]);
+
+
+useEffect(()=> {}, [])

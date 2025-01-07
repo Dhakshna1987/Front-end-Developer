@@ -1,0 +1,68 @@
+
+HOC
+---
+
+In React, a Higher-Order Component(HOC) is a function that takes a component as a arguments and returns a 
+new component with additional functionality.
+
+
+HOC used for reuse component logic, authentication or performance optimaztion in react application. 
+
+const EnhancedComponent = withExtraFunctionality(OriginalComponet);
+
+
+
+import React, { useState, useEffect } from 'react';
+import User from './User';
+import withLoading from './withLoading';
+
+
+
+// Wrapped User component with loading functionality
+const UserWithLoading = withLoading(User);
+
+const App = () => {
+  const [user, setUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate fetching user data
+    setTimeout(() => {
+      setUser({ name: 'John Doe', email: 'john@example.com' });
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
+  return <UserWithLoading isLoading={isLoading} user={user} />;
+};
+
+export default App;
+
+
+import React from 'react';
+
+// Higher-Order Component (HOC)
+const withLoading = (WrappedComponent) => {
+  return function EnhancedComponent({ isLoading, ...props }) {
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+    return <WrappedComponent {...props} />;
+  };
+};
+
+export default withLoading;
+
+
+import React from 'react';
+
+const User = ({ user }) => {
+  return (
+    <div>
+      <h1>{user.name}</h1>
+      <p>{user.email}</p>
+    </div>
+  );
+};
+
+export default User;

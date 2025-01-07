@@ -1,0 +1,23 @@
+
+Virtual DOM.
+-----------
+Virtual DOM is a lightweight in-memeory represented of the actual DOM. 
+It is used to improve the performance of updated and changes to the actual DOM by reducing the number of
+expensive DOM manipulations.
+
+How Does working Virtual DOM.
+-----------------------------
+Virtual DOM works by comparing current virtual DOM tree with new virtual DOM tree and then applying the minimal set of changes to the acutal DOM.  
+
+This allow React to efficiently update the user interface without causing uncessary rerenders or layout changes.
+
+example
+When a component's state or props change, React will create a new virtual DOM tree, compare it to previous tree, and then apply only the minimal set of changes necessary to the actual DOM. This improves the performance of the application and reduces the number of unnecessary re-renders.
+
+Real DOM
+--------
+
+Real DOM is the actual tree-like structure of a web page. which can be manipulated directly to change the layout or content page.
+
+
+

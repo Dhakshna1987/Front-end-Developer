@@ -1,0 +1,30 @@
+
+useState()
+==========
+
+This hook allows you to add state to functional components. It returns an array with two values:
+ the current state variable and a function to update the state variable.
+
+syntax:
+------
+const [stateVariable, setStateFunction] = useState(initialValue)
+
+stateVariable: The current state value
+setStateFunction: A function to update the state value.
+initialValue: the initial state value.
+
+What Can State Hole?
+-------------------
+
+The useState Hook can be used to keep track of
+
+    . strings
+    . numbers
+    . booleans
+    . arrays
+    . objects, and
+    . any combination of these!
+
+Note:
+We should never directly update state. Ex: color="red" is not allowed.
+

@@ -1,0 +1,46 @@
+
+Lazy Loading:
+=============
+
+Lazy loading only loads the parts of your app that the need to see.
+By loading components 'just in time' you reduce the amount of javascript initially sent to the user's browser, speeding up the app's initial load.
+
+ In React, you can implement lazy loading using React.lazy() and Suspense to load components only 
+when they are needed.
+
+const  LazyComponent = React.lazy(() => import('./LazyComponent));
+
+function MyTestComponent(){
+    return (
+        <>
+        <h1>Welcome </h1>
+        <Suspense fallback={<div>loading....</div>}>
+        <LazyComponent />
+        </Suspense>
+        </>
+    );
+}
+export default MyTestComponent;
+
+<!-- Router and lazy loading -->
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Lazy-loaded components
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+
+function App() {
+  return (
+    <Router>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Suspense>
+    </Router>
+  );
+}
+
+export default App;

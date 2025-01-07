@@ -1,0 +1,24 @@
+React Forms
+-----------
+React handles forms using controlled components, where form elements like <input> are controlled by React state, making it easier to manage user input and form submission.
+
+Form State Management
+---------------------
+
+React allows you to create state variables to hold the current values of form inputs.
+
+You can use hooks like useState or state management libraries the Redux to manage the form data.
+
+By updating the state variables when the form inputs change, you keep track of the user's input.
+
+
+Handling Form Events
+--------------------
+
+React provides event handlers that allow you to respond to user interactions with the form.
+
+The most common event handler is onChange, which fires whenever the value of an input field changes.
+
+By capturing and updating the form state with each onChange event, you can keep the form data up to date.
+
+

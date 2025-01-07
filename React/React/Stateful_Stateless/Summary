@@ -1,0 +1,32 @@
+1. Stateful Component:
+Definition: A stateful component is a component that holds and manages its own state 
+using React's useState hook (in functional components) or this.state (in class components).
+ The state of the component can change over time and the component re-renders when the state is updated.
+Purpose: Used when you need to track and respond to user input, data changes, or any internal state in the application.
+
+import React, { useState } from 'react';
+
+const Counter = () => {
+  const [count, setCount] = useState(0);  // Component has state
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+};
+
+export default Counter;
+
+2. Stateless Component:
+Definition: A stateless component (also known as a "dumb" or "presentational" component) is a component that doesn’t manage its own state. It simply receives data (props) from a parent component and renders the UI based on that data. It does not have any internal state or lifecycle methods.
+Purpose: Used when a component only needs to display data and doesn’t need to manage any state. They are simpler, reusable, and easier to test.
+
+Functional Stateless Component Example:
+
+const Greeting = (props) => {
+  return <h1>Hello, {props.name}!</h1>;  // No internal state
+};
+
+export default Greeting;

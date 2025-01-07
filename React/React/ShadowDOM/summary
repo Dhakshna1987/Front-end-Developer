@@ -1,0 +1,65 @@
+
+Shadow DOM
+
+shadow DOM refers to a feature of web browsers that allows developers to create separte the DOM tree,
+called a shadow tree, that is attached to a specific element and is hidden from the main document.
+
+
+Shadow DOM is a feature of web browers that allows for scoping of CSS and javascript within a specific element.
+
+
+Examples:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow DOM Example</title>
+    <style>
+        /* Styles for the main document */
+        h1 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h1>This is a heading outside of Shadow DOM</h1>
+
+<!-- A custom element with a shadow DOM -->
+<custom-element></custom-element>
+
+<script>
+    // Define a custom element
+    class CustomElement extends HTMLElement {
+        constructor() {
+            super();
+
+            // Attach a shadow DOM to the element
+            const shadow = this.attachShadow({ mode: 'open' });
+
+            // Create content inside the shadow DOM
+            const shadowHeading = document.createElement('h1');
+            shadowHeading.textContent = 'This is inside Shadow DOM';
+
+            // Apply scoped styles to shadow DOM
+            const style = document.createElement('style');
+            style.textContent = `
+                h1 {
+                    color: blue;
+                }
+            `;
+
+            // Append the heading and style to the shadow root
+            shadow.appendChild(style);
+            shadow.appendChild(shadowHeading);
+        }
+    }
+
+    // Register the custom element
+    customElements.define('custom-element', CustomElement);
+</script>
+
+</body>
+</html>

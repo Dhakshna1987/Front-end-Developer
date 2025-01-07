@@ -1,0 +1,6 @@
+CSS Preprocessors
+=================
+
+Eact supports the use of CSS preprocessors like Sass, Less, or Styles. You can write your styles using the preprocessor syntax and compile them into regular CSS that can be imported and used in your React components.
+
+example. SASS {Less}

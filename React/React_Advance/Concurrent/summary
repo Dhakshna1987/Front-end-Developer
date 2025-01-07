@@ -1,0 +1,10 @@
+
+
+How does concurrent rendering work in React? 
+
+
+Concurrent rendering is an experimental feature in React that allows 
+React to interrupt rendering work to handle high-priority updates, 
+making applications more responsive by allowing the UI to remain 
+interactive while heavy computations are performed in the 
+background. 

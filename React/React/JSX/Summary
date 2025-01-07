@@ -1,0 +1,59 @@
+
+JSX
+----
+JSX stands for JavaScript XML. It is a syntax extension for JavaScript that allows you to write HTML directly within JavaScript code. It is commonly uses JSX to describe what the UI should look like. 
+
+
+Browser cann't read JSX file directly. They must be transpiled, or converted, to Javscript before they can be interpreted by the browser
+
+
+import React from 'react';
+
+function Greeting() {
+  const name = 'John Doe';
+  
+  return (
+    <div>
+      <h1>Hello, {name}!</h1>
+    </div>
+  );
+}
+
+export default Greeting;
+
+
+
+import points | JSX
+===================
+.Import React: Begin by importin the React library.
+
+.One root element: JSX expression must have a single root element
+
+.HTML-like syntax: Jsx uses HTML-like syntax to define elements and attributes.
+
+.Self-closing tags: Use self-closing tags for elements without children.
+
+.Embed Javascript expression within curly braces {}.
+
+.Class vs className: Use className instead of class for CSS classes.
+
+.Inline styles: Apply inline styles using the style attributes with Javascript object
+
+.Capitalize component names to differentiate them from HTML elements.
+
+.Javascript expressions, not statements: Use Javascript expression, not statements, inside curly braces.
+
+.Commenting: Place comments within curly braces.
+
+.Fragments: Use fragments to group elements without adding extra nodes to the DOM.
+
+.Event handling: Define event handlers using camelCase naming conventions.
+
+.Conditional rendering: Use Javascript expression or logical operator for conditional renderig.
+
+.JSX is not HTML: Remember that JSX is transpiled into Javascript, not HTML
+
+.Keys in lists: Assign unique "key" props to items in lists for efficient rendering.
+
+
+

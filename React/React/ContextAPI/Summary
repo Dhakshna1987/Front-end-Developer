@@ -1,0 +1,66 @@
+
+Context API | react
+===================
+
+In React, the Context API is a built-in feature that provides a way to manage global state or share data across components in a component tree without the need to pass props explicity through every intermediate component.
+
+The Context API is used to manage global state that needs to be accessible by multiple components without prop drilling. It is often used for theme management, user authentication, and language settings
+
+Context API | React
+--------------------
+
+Provider
+Consumer
+
+Context Provider: 
+    This component creates a context and holds the state that you want to share with other components. It wraps around the components that need access to the shared state.
+Context Consumer:
+   This component consumes the data stored in the context and allows components to access and use that data.
+
+Create Context API
+
+  You can create context API using simple 3 steps
+
+  1. Create
+  2. Provide
+  3. Consume
+  
+1. Create Context
+
+ Import React and create a new context using React.createContext()
+
+ import React from 'react';
+ const myContext = React.createContext()
+
+ 2. Provide
+
+ Create a Provider component that wraps around the components needing access to the context's data. Provide the shared data using the value prop.
+
+ const MyContextProvider = ( { children }) => {
+    //shared data
+    const sharedData = "Hello from Context";
+
+    return (
+        <MyContext.Provider value = {sharedData}>
+        {children} //Child component
+        </MyContext.Provider>
+    )
+ }
+
+ 3. Consume
+
+ Consume the context data in the child components using the Consumer component. (or the useContext hook for functional components)
+
+
+ const ChildComponent = () => {
+    return (
+        <MyContext.Consumer> 
+        {(data) => (
+            <div>
+            <h3> Child Component</h3>
+            <p> Received data: {data} </p>
+            </div>
+        )}
+        </MyContext.Consumer>
+    )
+ }

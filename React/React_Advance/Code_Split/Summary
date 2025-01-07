@@ -1,0 +1,29 @@
+Explain the concept of code splitting in React. 
+
+Code splitting is a technique to split the code into smaller chunks, 
+which are loaded on demand rather than all at once. It improves the 
+load time of the application. React supports code splitting via 
+dynamic import() and tools like Webpack
+
+
+import React, { Suspense } from 'react';
+
+// Lazy load a component
+const LazyComponent = React.lazy(() => import('./LazyComponent'));
+
+function App() {
+  return (
+    <div>
+      <h1>My App</h1>
+      {/* Use Suspense to provide a fallback while the lazy component is loading */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyComponent />
+      </Suspense>
+    </div>
+  );
+}
+
+export default App;
+
+React.lazy(): This function dynamically imports the LazyComponent only when it is rendered.
+Suspense: React’s built-in Suspense component is used to wrap lazy-loaded components and provide a fallback UI (like a loading spinner) while the component is being loaded.

@@ -1,0 +1,31 @@
+
+
+useReducer()
+-------------
+
+The useReducer Hook is similar to the useState Hook.
+
+useReducer is a built-in hook that provides an alternative way to manage state in functional components
+
+It is particulary useful when dealing with complex state logic or when the state transitions depend on previous states.
+The useReducer hook follows the reducer pattern, similar to how Redux manages state using reducers.
+
+Syntax:
+------
+useReducer(<reducer>, <initialState>)
+
+reducer function: Contains your custom state logic. A function that takes the current state and an action as arguments and returns the new state.
+
+initialState: can be a simple value but generally will contain an object. When the component is mounted for the first time.
+
+useReducer() | Returns
+======================
+
+const [state, dispatch] = useReducer()
+
+The useReducer Hook returns the current state and a dispatch method.
+
+.State: The current state value returned by useReducer.
+
+.dispatch: A function that allows you to send actions to the reducer. It takes an action object as an argument and trigger the state update.
+

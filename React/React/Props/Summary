@@ -1,0 +1,39 @@
+
+What is Props?
+--------------
+ Props in a React App as act a gateway of communication between the parent and child Components.
+ Props are used to pass data from parent to child component. Props are simply properties.
+ Every component has a props object by default. If we see in the console, we will get to know that props is an object.
+ Props are read only, meaning that they cannot be modified by the child component.
+
+
+Define Props
+-----------
+//parent component
+
+const Parent = () => {
+    const name = "tech buddies"
+    return <Child name = {name} />
+}
+
+//Child component 
+ const Child = (props) => {
+    return <h1> Hello, {props.name}! </h1>
+ }
+
+ Different  ways to use Props
+
+ When you will be working with different React Apps. you will find these methods
+
+ Dot Notation  -- props.name
+ Destructuring the props object -- const { name, age} = props
+ Destructuring within()  --- function Name({name, age}) { }
+ Using Spread Operator --- <Name {...props} />
+
+ PropTypes: It is used for type checking.
+
+ Greeting.propTypes = {
+  name: PropTypes.string
+};
+
+

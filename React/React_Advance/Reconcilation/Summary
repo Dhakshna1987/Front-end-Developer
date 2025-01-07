@@ -1,0 +1,6 @@
+
+
+Reconciliation is the process by which React updates the DOM by 
+comparing the virtual DOM with the previous version and only 
+applying the necessary changes. This helps improve performance by 
+minimizing direct DOM manipulations. 

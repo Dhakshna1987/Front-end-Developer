@@ -1,0 +1,49 @@
+List | Keys
+===========
+
+The key prop is used to identify which items in a list have changed, 
+been added, or removed. Keys should be unique and stable to help 
+React optimize rendering. 
+Example
+-------
+
+const items = ["Apple", "Banana", "Orange"];
+
+const listItems = items.map((item) => {
+    <li key={item}>{item}</li>
+});
+
+return <ul>{listItems} </ul>
+
+In the example above, the key={item} assigns the value of each item in the items array as the key for the corresponding list Element.
+
+
+What is a list in React ?
+-------------------------
+A list in React refers to an array or collection of items that you want to render as components. 
+For example a list of to-do items, a list of products, or a list of blog pos.
+
+Why do we need keys?
+--------------------
+React uses keys to identify individual elements in a list. 
+keys help React understand the relationship between the previous and current set of items in the list.
+
+What makes a key unique?
+------------------------
+Each key in a list should be unique within the scope of that list. Typically, 
+you use an identifier or a unique property from your data source as the key.
+
+How to assign keys to list elements?
+------------------------------------
+When rendering a list of elements in React, you need to assign a key prop to each Element. 
+You can do this by using the key attribute within the map function.
+
+Why are unique keys important?
+------------------------------
+
+Unique keys help React efficiently update the list when changes occur.  React uses the keys to determine which elements are added, removed, or reordered.
+
+
+
+
+

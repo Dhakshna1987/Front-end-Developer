@@ -1,0 +1,40 @@
+
+
+Folder Structure
+----------------
+
+A typically React project follows a common folder structure that organize the codebase.
+
+-> My-App
+  > node_modules
+  > Public
+  > src
+     > .gitgnore
+     > package-lock.json
+     > package.json
+     > README.md
+
+
+src: This is the main folder where most of your project's code resides.
+
+  . index.js: The entry point of your application
+  . App.js: The root component that gets rendered in the browser.
+  . components: This folder contains reusable and smaller components used in the project.
+  . pages: This folder contains larger components that represent different pages or views of your application
+  . styles: CSS or stylin-related files, including global styles and component-specific styles.
+  . assets: Static assets such as images, icons, or fonts used in your application.
+  . utils: Utility functions or helper modules that are used throughout the project.
+  . services: This folder holds any services or Api-related files.
+
+public: This folder contains static assets that don't require processing, such as the HTML file.
+
+node_modules: It is automatically created when you install dependencies.
+
+package.json: This file lists the project's metadata and dependencies, including scripts for running various tasks.
+
+package-lock.json: These files are automatically generated and lock the versions of your installed dependencies, ensuring consistent builds across different machines.
+
+.gitignore: This file specifies which files or directories should be ignored by version control (e.g. Git)
+
+.README.md: A file containing information about the project.
+

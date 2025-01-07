@@ -1,0 +1,14 @@
+
+useMemo()
+---------
+
+useMemo is a hook that allows you to memozie a value.
+It is used to optimize the performance of a component by only re-computing a value if its dependencies have changed.
+This can be useful for avoiding expensive calculations or rendering operations.
+
+
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+
+useMemo accepts two arguments:
+A function that computes the value.
+An array of dependencies. The function is only re-executed when one of these dependencies changes.

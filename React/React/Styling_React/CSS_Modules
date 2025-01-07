@@ -1,0 +1,11 @@
+
+CSS Modules:
+===========
+
+CSS Modules allow you to write CSS sytlesheets and import them as Javascript modules.
+
+CSS class names are scoped locally to the component, preventing style conflicts. You can improve the css file and use the defined class names in your Jsx code.
+
+import styles from "./styles.module.css";
+
+<div className={styles.container}> Hello </div>

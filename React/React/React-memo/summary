@@ -1,0 +1,11 @@
+
+React.memo
+----------
+
+In React, React.memo() is a higher-order component that optimizes performance by preventing unnecessary re-renders 
+of functional components.  
+
+Usage of React.memo()
+The React.memo() function takes a component as an argument and returns a memoized version of that component. 
+If the props are the same between renders, React will reuse the last rendered output, skipping the rendering phase.
+

@@ -1,0 +1,13 @@
+
+Stylig React JS
+===============
+In React.js, there are several ways to apply styling to components.
+
+Here are some common approaches:
+
+.Inline Styles
+.CSS Modules
+.CSS_in_JS libraries
+.External CSS Files
+.CSS Preprocessors
+

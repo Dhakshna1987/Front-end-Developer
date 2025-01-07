@@ -1,0 +1,85 @@
+
+Conditional Rendering
+---------------------
+
+You can conditionally render components using JavaScript logical 
+operators like &&, ternary operators, or if statements inside the 
+component's render method
+
+. if-Else statements
+. Terary Operators
+. Logical && Operators
+. switch condition
+. Conditional Render with Components
+
+<!-- Using if-else: -->
+
+function Greeting({ isLoggedIn }) {
+  if (isLoggedIn) {
+    return <h1>Welcome back!</h1>;
+  } else {
+    return <h1>Please log in.</h1>;
+  }
+}
+
+// Usage
+<Greeting isLoggedIn={true} />
+
+
+<!-- Using Ternary Operator: -->
+
+function Greeting({ isLoggedIn }) {
+    return (
+      <h1>
+        {isLoggedIn ? "Welcome back!" : "Please log in."}
+      </h1>
+    );
+  }
+  
+  // Usage
+  <Greeting isLoggedIn={false} />
+  
+  <!-- Using Logical && Operator: -->
+
+  function Notification({ hasUnreadMessages }) {
+    return (
+      <div>
+        <h1>Notifications</h1>
+        {hasUnreadMessages && <p>You have unread messages!</p>}
+      </div>
+    );
+  }
+  
+  // Usage
+  <Notification hasUnreadMessages={true} />
+
+  <!-- Using switch Statement: -->
+  function StatusMessage({ status }) {
+    switch (status) {
+      case "loading":
+        return <p>Loading...</p>;
+      case "success":
+        return <p>Data loaded successfully!</p>;
+      case "error":
+        return <p>Error loading data.</p>;
+      default:
+        return <p>Unknown status.</p>;
+    }
+  }
+  
+  // Usage
+  <StatusMessage status="success" />
+
+  <!-- Conditional Rendering Inside JSX: -->
+
+  function Profile({ isLoggedIn, username }) {
+    return (
+      <div>
+        <h1>Welcome {isLoggedIn ? username : "Guest"}!</h1>
+      </div>
+    );
+  }
+  
+  // Usage
+  <Profile isLoggedIn={true} username="John" />
+    

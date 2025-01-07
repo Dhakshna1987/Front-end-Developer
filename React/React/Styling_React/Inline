@@ -1,0 +1,14 @@
+
+Inline CSS
+=========
+
+You can apply inline styles directly to Jsx elements using the style attributes.
+
+The Style attribute takes a javascript object with camel-cased CSS property-value pairs.
+
+const styles = {
+    color: "red",
+    fontSize: "16px"
+};
+
+<div style = {styles}> Hello World </div>
